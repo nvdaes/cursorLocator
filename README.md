@@ -10,7 +10,7 @@ This add-on makes possible to know the position of the system caret respect to t
 
 ## Gestures ##
 
-* NVDA+shift+l: Reports the lenght of the current line until the caret position.
+* NVDA+shift+l: Reports the lenght of the current line.
 
 This gesture can be changed from the NVDA's menu, Preferences submenu, Input gestures dialog, System caret category
 
