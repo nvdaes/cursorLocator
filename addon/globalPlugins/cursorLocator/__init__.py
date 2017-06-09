@@ -39,7 +39,7 @@ class AddonSettingsDialog(SettingsDialog):
 		self.reportStartCheckBox.SetValue(config.conf["cursorLocator"]["reportStartOfLine"])
 
 				# Translators: Label of a dialog.
-		self.LengthEdit = sHelper.addLabeledControl(_("Announce line length:"), nvdaControls.SelectOnFocusSpinCtrl,
+		self.LengthEdit = sHelper.addLabeledControl(_("Report &line length:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=0, max=600, initial=config.conf["cursorLocator"]["reportLineLength"])
 
 	def postInit(self):
