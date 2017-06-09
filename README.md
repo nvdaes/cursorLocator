@@ -1,18 +1,21 @@
 # Cursor Locator #
-* Author: Noelia Ruiz Martínez
+* Author: Noelia Ruiz Martínez.
 
 This add-on makes possible to know the position of the system caret respect to the start of the current line, while typing to add text in multiline controls.
 
-## Automatic Notifications ##
+## Cursor Locator settings ##
 
-* A low tone when the cursor is located next to the first character of the current line.
-* A gight tone when the caret is located next to the 80th character of the current line.
+This dialog, under NVDA's menu > Preferences submenu, provides the following options:
 
-## Gestures ##
+* Report start of line: When this control is checked, a low tone will announce if the caret is at the start of the current line while text is been added.
+* Report line length: You can type or choose a line length (number of characters), which will be announced by a hight tone when it's reached.
 
-* NVDA+shift+l: Reports the lenght of the current line.
+## Commands ##
 
-This gesture can be changed from the NVDA's menu, Preferences submenu, Input gestures dialog, System caret category
+You can assign gestures to the following commands, trought the NVDA's menu > Preferences submenu > Input gestures dialog.
+
+* Reports the lenght of the current line (System caret category).
+* Shows the Cursor Locator settings dialog (Config category).
 
 ## Changes for 1.0 ##
 * Initial version
