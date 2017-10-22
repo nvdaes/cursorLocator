@@ -112,3 +112,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 	# Translators: Message presented in input help mode.
 	script_reportLineLength.__doc__ = _("Reports the length of the current line.")
+
+	__gestures = {
+		"kb:NVDA+control+shift+l": "reportLineLength",
+	}
