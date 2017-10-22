@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 #cursorLocator: Global plugin to know the cursor position when typing on multiline edit controls
- #Copyright (C) 2017 Noelia Ruiz Martínez, Alberto Buffolino
+ #Copyright (C) 2017 Noelia Ruiz Martínez
 # Released under GPL 2
 
 import addonHandler
