@@ -16,7 +16,6 @@ import wx
 import gui
 from gui import guiHelper, nvdaControls
 from gui.settingsDialogs import SettingsDialog
-from NVDAObjects.window.edit import Edit
 from globalCommands import SCRCAT_SYSTEMCARET, SCRCAT_CONFIG
 
 addonHandler.initTranslation()
