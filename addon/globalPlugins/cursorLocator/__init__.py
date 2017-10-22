@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 #cursorLocator: Global plugin to know the cursor position when typing on multiline edit controls
- #Copyright (C) 2016 Noelia Ruiz Martínez, Alberto Buffolino
+ #Copyright (C) 2017 Noelia Ruiz Martínez, Alberto Buffolino
 # Released under GPL 2
 
 import addonHandler
@@ -38,7 +38,7 @@ class AddonSettingsDialog(SettingsDialog):
 		self.reportStartCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Report start of line")))
 		self.reportStartCheckBox.SetValue(config.conf["cursorLocator"]["reportStartOfLine"])
 
-				# Translators: Label of a dialog.
+		# Translators: Label of a dialog.
 		self.LengthEdit = sHelper.addLabeledControl(_("Report &line length:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=0, max=600, initial=config.conf["cursorLocator"]["reportLineLength"])
 
