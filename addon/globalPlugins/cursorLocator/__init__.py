@@ -66,17 +66,20 @@ class AddonSettingsPanel(SettingsPanel):
 		sHelper.addItem(startGroup)
 
 		# Translators: Label for the Cursor Locator panel.
-		self.startHzEdit = startGroup.addLabeledControl(_("Pitch of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=20000, initial=config.conf["cursorLocator"]["startLinePitch"])
+		self.startHzEdit = startGroup.addLabeledControl(
+			_("Pitch of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl, min=20, max=20000, initial=config.conf["cursorLocator"]["startLinePitch"]
+		)
 
 		# Translators: Label for the Cursor Locator panel.
-		self.startLengthEdit = startGroup.addLabeledControl(_("Length of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=5000, initial=config.conf["cursorLocator"]["startLineLength"])
+		self.startLengthEdit = startGroup.addLabeledControl(
+			_("Length of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=20, max=5000, initial=config.conf["cursorLocator"]["startLineLength"]
+		)
 
 		# Translators: Label for the Cursor Locator panel.
-		label=_("Test sound for start of line")
-		self.testStartSoundButton=startGroup.addItem(wx.Button(self, label=label))
-		self.testStartSoundButton.Bind(wx.EVT_BUTTON,self.onTestStartSound)
+		label = _("Test sound for start of line")
+		self.testStartSoundButton = startGroup.addItem(wx.Button(self, label=label))
+		self.testStartSoundButton.Bind(wx.EVT_BUTTON, self.onTestStartSound)
 
 		# Translators: Label for a group of Cursor Locator options.
 		endGroupText = _("Sound for end of line")
@@ -84,15 +87,19 @@ class AddonSettingsPanel(SettingsPanel):
 		sHelper.addItem(endGroup)
 
 		# Translators: Label for the Cursor Locator panel.
-		self.endHzEdit = endGroup.addLabeledControl(_("Pitch of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=20000, initial=config.conf["cursorLocator"]["endLinePitch"])
+		self.endHzEdit = endGroup.addLabeledControl(
+			_("Pitch of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=20, max=20000, initial=config.conf["cursorLocator"]["endLinePitch"]
+		)
 
 		# Translators: Label for the Cursor Locator panel.
-		self.endLengthEdit = endGroup.addLabeledControl(_("Length of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=5000, initial=config.conf["cursorLocator"]["endLineLength"])
+		self.endLengthEdit = endGroup.addLabeledControl(
+			_("Length of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=20, max=5000, initial=config.conf["cursorLocator"]["endLineLength"]
+		)
 
 		# Translators: Label for the Cursor Locator panel.
-		label=_("Test sound for end of line")
+		label = _("Test sound for end of line")
 		self.testEndSoundButton = startGroup.addItem(wx.Button(self, label=label))
 		self.testEndSoundButton.Bind(wx.EVT_BUTTON,self.onTestEndSound)
 
