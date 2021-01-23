@@ -28,6 +28,10 @@ ADDON_PANEL_TITLE = ADDON_SUMMARY
 confspec = {
 	"reportStartOfLine": "boolean(default=True)",
 	"reportLineLength": "integer(default=80)",
+	"startLinePitch": "integer(default=400)",
+	"startLineLength": "integer(default=50)",
+	"endLinePitch": "integer(default=1000)",
+	"endLineLength": "integer(default=50)",
 }
 config.conf.spec["cursorLocator"] = confspec
 
@@ -36,22 +40,78 @@ class AddonSettingsPanel(SettingsPanel):
 
 	title = ADDON_PANEL_TITLE
 
+	# Translators: Description of the Cursor Locator panel.
+	description = _("Configure {}").format(ADDON_SUMMARY)
+
 	def makeSettings(self, settingsSizer):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
-		# Translators: Label of a dialog.
-		self.reportStartCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Report start of line")))
+		sHelper.addItem(wx.StaticText(self, label=self.panelDescription))
+
+		# Translators: Label for a group of Cursor Locator options.
+		lineGroupText = _("Line properties")
+		lineGroup = guiHelper.BoxSizerHelper(self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=lineGroupText), wx.VERTICAL))
+		sHelper.addItem(lineGroup)
+
+		# Translators: Label for the Cursor Locator panel.
+		self.reportStartCheckBox = lineGroup.addItem(wx.CheckBox(self, label=_("&Report start of line")))
 		self.reportStartCheckBox.SetValue(config.conf["cursorLocator"]["reportStartOfLine"])
 
-		# Translators: Label of a dialog.
-		self.LengthEdit = sHelper.addLabeledControl(_("Report &line length:"), nvdaControls.SelectOnFocusSpinCtrl,
+		# Translators: Label for the Cursor Locator panel.
+		self.LengthEdit = lineGroup.addLabeledControl(_("Report &line length:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=0, max=600, initial=config.conf["cursorLocator"]["reportLineLength"])
+
+		# Translators: Label for a group of Cursor Locator options.
+		startGroupText = _("Sound for start of line")
+		startGroup = guiHelper.BoxSizerHelper(self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=startGroupText), wx.VERTICAL))
+		sHelper.addItem(startGroup)
+
+		# Translators: Label for the Cursor Locator panel.
+		self.startHzEdit = startGroup.addLabeledControl(_("Pitch of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=20, max=20000, initial=config.conf["cursorLocator"]["startLinePitch"])
+
+		# Translators: Label for the Cursor Locator panel.
+		self.startLengthEdit = startGroup.addLabeledControl(_("Length of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=20, max=5000, initial=config.conf["cursorLocator"]["startLineLength"])
+
+		# Translators: Label for the Cursor Locator panel.
+		label=_("Test sound for start of line")
+		self.testStartSoundButton=startGroup.addItem(wx.Button(self, label=label))
+		self.testStartSoundButton.Bind(wx.EVT_BUTTON,self.onTestStartSound)
+
+		# Translators: Label for a group of Cursor Locator options.
+		endGroupText = _("Sound for end of line")
+		endGroup = guiHelper.BoxSizerHelper(self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=startGroupText), wx.VERTICAL))
+		sHelper.addItem(endGroup)
+
+		# Translators: Label for the Cursor Locator panel.
+		self.endHzEdit = endGroup.addLabeledControl(_("Pitch of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=20, max=20000, initial=config.conf["cursorLocator"]["endLinePitch"])
+
+		# Translators: Label for the Cursor Locator panel.
+		self.endLengthEdit = endGroup.addLabeledControl(_("Length of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=20, max=5000, initial=config.conf["cursorLocator"]["endLineLength"])
+
+		# Translators: Label for the Cursor Locator panel.
+		label=_("Test sound for end of line")
+		self.testEndSoundButton = startGroup.addItem(wx.Button(self, label=label))
+		self.testEndSoundButton.Bind(wx.EVT_BUTTON,self.onTestEndSound)
 
 	def postInit(self):
 		self.reportStartCheckBox.SetFocus()
 
+	def onTestStartSound(self, evt):
+		tones.beep(self.startHzEdit.GetValue(), self.startLengthEdit.GetValue())
+
+	def onTestEndSound(self, evt):
+		tones.beep(self.endHzEdit.GetValue(), self.endLengthEdit.GetValue())
+
 	def onSave(self):
 		config.conf["cursorLocator"]["reportStartOfLine"] = self.reportStartCheckBox.GetValue()
 		config.conf["cursorLocator"]["reportLineLength"] = self.LengthEdit.GetValue()
+		config.conf["cursorLocator"]["startLinePitch"] = self.startHzEdit.GetValue()
+		config.conf["cursorLocator"]["startLineLength"] = self.startLengthEdit.GetValue()
+		config.conf["cursorLocator"]["endLinePitch"] = self.endHzEdit.GetValue()
+		config.conf["cursorLocator"]["endLineLength"] = self.endLengthEdit.GetValue()
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -92,16 +152,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		reportStart = config.conf["cursorLocator"]["reportStartOfLine"]
 		reportLineLength = config.conf["cursorLocator"]["reportLineLength"]
-		if not reportStart and not reportLineLength:
+		startPitch = config.conf["cursorLocator"]["startLinePitch"]
+		startLength = config.conf["cursorLocator"]["startLineLength"]
+		endPitch = config.conf["cursorLocator"]["endLinePitch"]
+		endLength = config.conf["cursorLocator"]["endLineLength"]
+		if not reportStart and reportLineLength == 0:
 			return
 		try:
 			info=obj.makeTextInfo(textInfos.POSITION_CARET)
 			info.expand(textInfos.UNIT_LINE)
 			text = self.removeCarriageReturn(info.text)
 			if reportStart and len(text) == 1:
-				tones.beep(400, 50)
-			if reportLineLength and len(text) == reportLineLength:
-				tones.beep(1000, 50)
+				tones.beep(startPitch, startLength)
+			if reportLineLength > 0 and len(text) == reportLineLength:
+				tones.beep(endPitch, endLength)
 		except Exception as e:
 			raise e
 
