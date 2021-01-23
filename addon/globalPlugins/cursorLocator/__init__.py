@@ -73,15 +73,14 @@ class AddonSettingsPanel(SettingsPanel):
 
 		# Translators: Label for the Cursor Locator panel.
 		self.startHzEdit = startGroup.addLabeledControl(
-			_("Pitch of sound for start of line:"),
-			nvdaControls.SelectOnFocusSpinCtrl,
+			_("Pitch of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=20000, initial=config.conf["cursorLocator"]["startLinePitch"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
 		self.startLengthEdit = startGroup.addLabeledControl(
 			_("Length of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=5000, initial=config.conf["cursorLocator"]["startLineLength"]
+			min=20, max=3000, initial=config.conf["cursorLocator"]["startLineLength"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
@@ -98,15 +97,14 @@ class AddonSettingsPanel(SettingsPanel):
 
 		# Translators: Label for the Cursor Locator panel.
 		self.endHzEdit = endGroup.addLabeledControl(
-			_("Pitch of sound for end of line:"),
-			nvdaControls.SelectOnFocusSpinCtrl,
+			_("Pitch of sound for end of line:"),	nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=20000, initial=config.conf["cursorLocator"]["endLinePitch"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
 		self.endLengthEdit = endGroup.addLabeledControl(
 			_("Length of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=5000, initial=config.conf["cursorLocator"]["endLineLength"]
+			min=20, max=3000, initial=config.conf["cursorLocator"]["endLineLength"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
