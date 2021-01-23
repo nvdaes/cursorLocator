@@ -31,6 +31,7 @@ confspec = {
 }
 config.conf.spec["cursorLocator"] = confspec
 
+
 class AddonSettingsPanel(SettingsPanel):
 
 	title = ADDON_PANEL_TITLE
@@ -68,8 +69,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: Message presented in input mode.
-		description = _("Shows the {} settings.").format(ADDON_SUMMARY)
-		category = SCRCAT_CONFIG
+		description=_("Shows the {} settings.").format(ADDON_SUMMARY)
+		category=SCRCAT_CONFIG
 	)
 	def script_settings(self, gesture):
 		wx.CallAfter(self.onSettings, None)
@@ -106,18 +107,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: Message presented in input help mode.
-		description = _("Reports the length of the current line."),
-		gesture = "kb:NVDA+control+shift+l"
+		description=_("Reports the length of the current line."),
+		gesture="kb:NVDA+control+shift+l"
 	)
 	def script_reportLineLength(self, gesture):
-		obj=api.getFocusObject()
-		treeInterceptor=obj.treeInterceptor
-		if isinstance(treeInterceptor,treeInterceptorHandler.DocumentTreeInterceptor) and not treeInterceptor.passThrough:
-			obj=treeInterceptor
+		obj = api.getFocusObject()
+		treeInterceptor = obj.treeInterceptor
+		if isinstance(treeInterceptor, treeInterceptorHandler.DocumentTreeInterceptor) and not treeInterceptor.passThrough:
+			obj = treeInterceptor
 		try:
-			info=obj.makeTextInfo(textInfos.POSITION_CARET)
+			info = obj.makeTextInfo(textInfos.POSITION_CARET)
 			info.expand(textInfos.UNIT_LINE)
-			l = len(self.removeCarriageReturn(info.text))
-			ui.message("Line length: %d" % l)
+			lineLen = len(self.removeCarriageReturn(info.text))
+			ui.message("Line length: %d" % lineLen)
 		except Exception:
 			pass
