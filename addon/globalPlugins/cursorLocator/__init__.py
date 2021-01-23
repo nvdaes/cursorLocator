@@ -41,7 +41,7 @@ class AddonSettingsPanel(SettingsPanel):
 	title = ADDON_PANEL_TITLE
 
 	# Translators: Description of the Cursor Locator panel.
-	description = _("Configure {}").format(ADDON_SUMMARY)
+	panelDescription = _("Configure {}").format(ADDON_SUMMARY)
 
 	def makeSettings(self, settingsSizer):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
@@ -80,7 +80,7 @@ class AddonSettingsPanel(SettingsPanel):
 		# Translators: Label for the Cursor Locator panel.
 		self.startLengthEdit = startGroup.addLabeledControl(
 			_("Length of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=3000, initial=config.conf["cursorLocator"]["startLineLength"]
+			min=20, max=2000, initial=config.conf["cursorLocator"]["startLineLength"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
@@ -104,7 +104,7 @@ class AddonSettingsPanel(SettingsPanel):
 		# Translators: Label for the Cursor Locator panel.
 		self.endLengthEdit = endGroup.addLabeledControl(
 			_("Length of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=3000, initial=config.conf["cursorLocator"]["endLineLength"]
+			min=20, max=2000, initial=config.conf["cursorLocator"]["endLineLength"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
