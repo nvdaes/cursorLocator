@@ -97,7 +97,7 @@ class AddonSettingsPanel(SettingsPanel):
 
 		# Translators: Label for the Cursor Locator panel.
 		self.endHzEdit = endGroup.addLabeledControl(
-			_("Pitch of sound for end of line:"),	nvdaControls.SelectOnFocusSpinCtrl,
+			_("Pitch of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=20000, initial=config.conf["cursorLocator"]["endLinePitch"]
 		)
 
