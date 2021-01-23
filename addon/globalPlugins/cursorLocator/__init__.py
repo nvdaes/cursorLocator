@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
-#cursorLocator: Global plugin to know the cursor position when typing on multiline edit controls
- #Copyright (C) 2017 Noelia Ruiz Martínez
+
+# cursorLocator: Global plugin to know the cursor position when typing on multiline edit controls
+# Copyright (C) 2017-2021 Noelia Ruiz Martínez
 # Released under GPL 2
 
 import addonHandler
@@ -14,11 +15,15 @@ import tones
 import config
 import wx
 import gui
-from gui import guiHelper, nvdaControls
-from gui.settingsDialogs import SettingsDialog
+from gui import SettingsPanel, NVDASettingsDialog, guiHelper, nvdaControls
+from scriptHandler import script
 from globalCommands import SCRCAT_SYSTEMCARET, SCRCAT_CONFIG
 
 addonHandler.initTranslation()
+
+# Constants
+ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
+ADDON_PANEL_TITLE = ADDON_SUMMARY
 
 confspec = {
 	"reportStartOfLine": "boolean(default=True)",
@@ -26,14 +31,13 @@ confspec = {
 }
 config.conf.spec["cursorLocator"] = confspec
 
-class AddonSettingsDialog(SettingsDialog):
+class AddonSettingsPanel(SettingsPanel):
 
-	# Translators: title of a dialog.
-	title = _("Cursor Locator settings")
+	title = ADDON_PANEL_TITLE
 
 	def makeSettings(self, settingsSizer):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
-		# Translators: label of a dialog.
+		# Translators: Label of a dialog.
 		self.reportStartCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Report start of line")))
 		self.reportStartCheckBox.SetValue(config.conf["cursorLocator"]["reportStartOfLine"])
 
@@ -44,10 +48,9 @@ class AddonSettingsDialog(SettingsDialog):
 	def postInit(self):
 		self.reportStartCheckBox.SetFocus()
 
-	def onOk(self,evt):
+	def onSave(self):
 		config.conf["cursorLocator"]["reportStartOfLine"] = self.reportStartCheckBox.GetValue()
 		config.conf["cursorLocator"]["reportLineLength"] = self.LengthEdit.GetValue()
-		super(AddonSettingsDialog, self).onOk(evt)
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -55,33 +58,36 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(globalPluginHandler.GlobalPlugin, self).__init__()
-		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
-		self.settingsItem = self.prefsMenu.Append(wx.ID_ANY,
-			# Translators: name of a menu item.
-			_("C&ursor locator settings..."))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onSettings, self.settingsItem)
+		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
 
 	def terminate(self):
-		try:
-			self.prefsMenu.RemoveItem(self.settingsItem)
-		except wx.PyDeadObjectError:
-			pass
+		NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 
 	def onSettings(self, evt):
-		gui.mainFrame._popupSettingsDialog(AddonSettingsDialog)
+		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
 
+	@script(
+		# Translators: Message presented in input mode.
+		description = _("Shows the {} settings.").format(ADDON_SUMMARY)
+		category = SCRCAT_CONFIG
+	)
 	def script_settings(self, gesture):
 		wx.CallAfter(self.onSettings, None)
-	script_settings.category = SCRCAT_CONFIG
-	# Translators: message presented in input mode.
-	script_settings.__doc__ = _("Shows the Cursor Locator settings dialog.")
+
+	def removeCarriageReturn(self, text):
+		try:
+			if ord(text[-1]) == 13:
+				text = text[:-1]
+		except IndexError:
+			pass
+		return text
 
 	def event_typedCharacter(self, obj, nextHandler, ch):
 		nextHandler()
 		states = obj.states
 		if not controlTypes.STATE_MULTILINE in states or controlTypes.STATE_READONLY in states:
 			return
-		if not ord(ch)>=32:
+		if not ord(ch) >= 32:
 			return
 		reportStart = config.conf["cursorLocator"]["reportStartOfLine"]
 		reportLineLength = config.conf["cursorLocator"]["reportLineLength"]
@@ -90,13 +96,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		try:
 			info=obj.makeTextInfo(textInfos.POSITION_CARET)
 			info.expand(textInfos.UNIT_LINE)
-			if reportStart and len(info.text) == 1:
+			text = self.removeCarriageReturn(info.text)
+			if reportStart and len(text) == 1:
 				tones.beep(400, 50)
-			if reportLineLength and len(info.text) == reportLineLength:
+			if reportLineLength and len(text) == reportLineLength:
 				tones.beep(1000, 50)
-		except (NotImplementedError, RuntimeError):
-			pass
+		except Exception as e:
+			raise e
 
+	@script(
+		# Translators: Message presented in input help mode.
+		description = _("Reports the length of the current line."),
+		gesture = "kb:NVDA+control+shift+l"
+	)
 	def script_reportLineLength(self, gesture):
 		obj=api.getFocusObject()
 		treeInterceptor=obj.treeInterceptor
@@ -105,13 +117,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		try:
 			info=obj.makeTextInfo(textInfos.POSITION_CARET)
 			info.expand(textInfos.UNIT_LINE)
-			l = len(info.text)
+			l = len(self.removeCarriageReturn(info.text))
 			ui.message("Line length: %d" % l)
-		except (NotImplementedError, RuntimeError):
+		except Exception:
 			pass
-	# Translators: Message presented in input help mode.
-	script_reportLineLength.__doc__ = _("Reports the length of the current line.")
-
-	__gestures = {
-		"kb:NVDA+control+shift+l": "reportLineLength",
-	}
