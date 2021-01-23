@@ -11,19 +11,19 @@ addon_info = {
 	# for previously unpublished addons, please follow the community guidelines at:
 	# https://bitbucket.org/nvdaaddonteam/todo/raw/master/guideLines.txt
 	# add-on Name, internal for nvda
-	"addon_name" : "clipContentsDesigner",
+	"addon_name" : "cursorLocator",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
-	"addon_summary" : _("Clip Contents Designer"),
+	"addon_summary" : _("Cursor Locator"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("""Add-on for managing clipboard text."""),
+	"addon_description" : _("""Reports cursor positions while typing on multiline edit controls."""),
 	# version
 	"addon_version" : ,
 	# Author(s)
-	"addon_author" : u"Noelia <nrm1977@gmail.com>, Abdel <abdelkrim.bensaid@gmail.com",
+	"addon_author" : u"Noelia Ruiz Martínez <nrm1977@gmail.com>",
 	# URL for the add-on documentation support
-	"addon_url" : "https://addons.nvda-project.org/addons/clipContentsDesigner",
+	"addon_url" : "https://github.com/nvdaes/cursorLocator",
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3")
@@ -39,7 +39,7 @@ import os.path
 
 # Define the python files that are the sources of your add-on.
 # You can use glob expressions here, they will be expanded.
-pythonSources = [os.path.join("addon", "*.py"), os.path.join("addon", "globalPlugins", "clipContentsDesigner", "*.py")]
+pythonSources = [os.path.join("addon", "cursorLocator", "*.py")]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]
