@@ -69,7 +69,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: Message presented in input mode.
-		description=_("Shows the {} settings.").format(ADDON_SUMMARY)
+		description=_("Shows the {} settings.").format(ADDON_SUMMARY),
 		category=SCRCAT_CONFIG
 	)
 	def script_settings(self, gesture):
@@ -112,9 +112,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_reportLineLength(self, gesture):
 		obj = api.getFocusObject()
-		treeInterceptor = obj.treeInterceptor
-		if isinstance(treeInterceptor, treeInterceptorHandler.DocumentTreeInterceptor) and not treeInterceptor.passThrough:
-			obj = treeInterceptor
+		ti = obj.treeInterceptor
+		if isinstance(ti, treeInterceptorHandler.DocumentTreeInterceptor) and not ti.passThrough:
+			obj = ti
 		try:
 			info = obj.makeTextInfo(textInfos.POSITION_CARET)
 			info.expand(textInfos.UNIT_LINE)
