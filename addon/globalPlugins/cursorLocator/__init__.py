@@ -49,7 +49,9 @@ class AddonSettingsPanel(SettingsPanel):
 
 		# Translators: Label for a group of Cursor Locator options.
 		lineGroupText = _("Line properties")
-		lineGroup = guiHelper.BoxSizerHelper(self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=lineGroupText), wx.VERTICAL))
+		lineGroup = guiHelper.BoxSizerHelper(
+			self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=lineGroupText), wx.VERTICAL)
+		)
 		sHelper.addItem(lineGroup)
 
 		# Translators: Label for the Cursor Locator panel.
@@ -57,12 +59,16 @@ class AddonSettingsPanel(SettingsPanel):
 		self.reportStartCheckBox.SetValue(config.conf["cursorLocator"]["reportStartOfLine"])
 
 		# Translators: Label for the Cursor Locator panel.
-		self.LengthEdit = lineGroup.addLabeledControl(_("Report &line length:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=0, max=600, initial=config.conf["cursorLocator"]["reportLineLength"])
+		self.LengthEdit = lineGroup.addLabeledControl(
+			_("Report &line length:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=0, max=600, initial=config.conf["cursorLocator"]["reportLineLength"]
+		)
 
 		# Translators: Label for a group of Cursor Locator options.
 		startGroupText = _("Sound for start of line")
-		startGroup = guiHelper.BoxSizerHelper(self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=startGroupText), wx.VERTICAL))
+		startGroup = guiHelper.BoxSizerHelper(
+			self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=startGroupText), wx.VERTICAL)
+		)
 		sHelper.addItem(startGroup)
 
 		# Translators: Label for the Cursor Locator panel.
@@ -83,7 +89,9 @@ class AddonSettingsPanel(SettingsPanel):
 
 		# Translators: Label for a group of Cursor Locator options.
 		endGroupText = _("Sound for end of line")
-		endGroup = guiHelper.BoxSizerHelper(self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=startGroupText), wx.VERTICAL))
+		endGroup = guiHelper.BoxSizerHelper(
+			self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=endGroupText), wx.VERTICAL)
+		)
 		sHelper.addItem(endGroup)
 
 		# Translators: Label for the Cursor Locator panel.
@@ -100,8 +108,8 @@ class AddonSettingsPanel(SettingsPanel):
 
 		# Translators: Label for the Cursor Locator panel.
 		label = _("Test sound for end of line")
-		self.testEndSoundButton = startGroup.addItem(wx.Button(self, label=label))
-		self.testEndSoundButton.Bind(wx.EVT_BUTTON,self.onTestEndSound)
+		self.testEndSoundButton = endGroup.addItem(wx.Button(self, label=label))
+		self.testEndSoundButton.Bind(wx.EVT_BUTTON, self.onTestEndSound)
 
 	def postInit(self):
 		self.reportStartCheckBox.SetFocus()
