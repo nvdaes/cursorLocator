@@ -73,18 +73,18 @@ class AddonSettingsPanel(SettingsPanel):
 
 		# Translators: Label for the Cursor Locator panel.
 		self.startHzEdit = startGroup.addLabeledControl(
-			_("Pitch of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			_("&Pitch of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=20000, initial=config.conf["cursorLocator"]["startLinePitch"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
 		self.startLengthEdit = startGroup.addLabeledControl(
-			_("Length of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			_("L&ength of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=2000, initial=config.conf["cursorLocator"]["startLineLength"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
-		label = _("Test sound for start of line")
+		label = _("&Test sound for start of line")
 		self.testStartSoundButton = startGroup.addItem(wx.Button(self, label=label))
 		self.testStartSoundButton.Bind(wx.EVT_BUTTON, self.onTestStartSound)
 
@@ -97,18 +97,18 @@ class AddonSettingsPanel(SettingsPanel):
 
 		# Translators: Label for the Cursor Locator panel.
 		self.endHzEdit = endGroup.addLabeledControl(
-			_("Pitch of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			_("P&itch of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=20000, initial=config.conf["cursorLocator"]["endLinePitch"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
 		self.endLengthEdit = endGroup.addLabeledControl(
-			_("Length of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
+			_("Le&ngth of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=2000, initial=config.conf["cursorLocator"]["endLineLength"]
 		)
 
 		# Translators: Label for the Cursor Locator panel.
-		label = _("Test sound for end of line")
+		label = _("Test s&ound for end of line")
 		self.testEndSoundButton = endGroup.addItem(wx.Button(self, label=label))
 		self.testEndSoundButton.Bind(wx.EVT_BUTTON, self.onTestEndSound)
 
