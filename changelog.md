@@ -1,2 +1,2 @@
-## Changes for 1.4.1-dev (PR #3) ##
-* Added spanish translation.
+## Changes for 1.4.3-dev (PR #4) ##
+* Added french translation.
