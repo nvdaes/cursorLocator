@@ -153,7 +153,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def removeCarriageReturn(self, text):
 		try:
-			if ord(text[-1]) == 13:
+			if ord(text[-1]) == 13 or ord(text[-1]) == 10:
+				text = text[:-1]
+			if ord(text[-1]) == 13 or ord(text[-1]) == 10:
 				text = text[:-1]
 		except IndexError:
 			pass
