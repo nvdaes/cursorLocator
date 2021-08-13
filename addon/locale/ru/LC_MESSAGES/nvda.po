@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cursor Locator 1.5.1-dev\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"POT-Creation-Date: 2021-08-13 23:54+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Alex Yeshanu <eshanuap@gmail.com>\n"
+"Language-Team: Alex Yeshanu <eshanuap@gmail.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: ../../../globalPlugins/cursorLocator\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: __init__.py:44
+msgid "Configure {}"
+msgstr "Настроить {}"
+
+#: __init__.py:51
+msgid "Line properties"
+msgstr "Свойство строки"
+
+#: __init__.py:58
+msgid "&Report start of line"
+msgstr "&Сообщать начало строки"
+
+#: __init__.py:63
+msgid "Report &line length:"
+msgstr "Сообщать дл&ину строки:"
+
+#: __init__.py:68
+msgid "Sound for start of line"
+msgstr "Звук для начала строки"
+
+#: __init__.py:76
+msgid "&Pitch of sound for start of line:"
+msgstr "&Высота звука для начала строки:"
+
+#: __init__.py:82
+msgid "L&ength of sound for start of line:"
+msgstr "&Длина звука для начала строки:"
+
+#: __init__.py:87
+msgid "&Test sound for start of line"
+msgstr "Проверить звук для &начала строки"
+
+#: __init__.py:92
+msgid "Sound for end of line"
+msgstr "Звук для конца строки"
+
+#: __init__.py:100
+msgid "P&itch of sound for end of line:"
+msgstr "В&ысота звука в конце строки:"
+
+#: __init__.py:106
+msgid "Le&ngth of sound for end of line:"
+msgstr "Д&лина звука для конца строки:"
+
+#: __init__.py:111
+msgid "Test s&ound for end of line"
+msgstr "Проверить звук для &конца строки"
+
+#: __init__.py:148
+msgid "Shows the {} settings."
+msgstr "إПоказывает настройки {}."
+
+#: __init__.py:192
+msgid "Reports the length of the current line."
+msgstr "Сообщает длину текущей строки."
