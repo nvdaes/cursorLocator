@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-
+import os.path
 # Build customizations
 # Change this file instead of sconstruct or manifest files, whenever possible.
 
