@@ -58,7 +58,7 @@ jobs:
         data["homepage"] = addonInfo["addon_url"]
         data["publisher"] = "nvdaes"
         [major, minor] = addonInfo["addon_minimumNVDAVersion"]
-        minNVDAVersion" = dict()
+        minNVDAVersion = dict()
         minNVDAVersion["major"] = int(major)
         minNVDAVersion["minor"] = int(minor)
         minNVDAVersion["patch"] = 0
