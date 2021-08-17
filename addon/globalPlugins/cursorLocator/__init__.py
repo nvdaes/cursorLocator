@@ -129,6 +129,7 @@ class AddonSettingsPanel(SettingsPanel):
 		config.conf["cursorLocator"]["endLinePitch"] = self.endHzEdit.GetValue()
 		config.conf["cursorLocator"]["endLineLength"] = self.endLengthEdit.GetValue()
 
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	scriptCategory = SCRCAT_SYSTEMCARET
@@ -164,7 +165,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_typedCharacter(self, obj, nextHandler, ch):
 		nextHandler()
 		states = obj.states
-		if not controlTypes.STATE_MULTILINE in states or controlTypes.STATE_READONLY in states:
+		if controlTypes.STATE_MULTILINE not in states or controlTypes.STATE_READONLY in states:
 			return
 		if not ord(ch) >= 32:
 			return
@@ -177,7 +178,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not reportStart and reportLineLength == 0:
 			return
 		try:
-			info=obj.makeTextInfo(textInfos.POSITION_CARET)
+			info = obj.makeTextInfo(textInfos.POSITION_CARET)
 			info.expand(textInfos.UNIT_LINE)
 			text = self.removeCarriageReturn(info.text)
 			if reportStart and len(text) == 1:
