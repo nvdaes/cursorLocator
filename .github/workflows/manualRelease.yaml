@@ -44,6 +44,18 @@ jobs:
       run: scons
     - name: Calculate sha256
       run: sha256sum *.nvda-addon >> changelog.md
+    - name: Checkout validate repo
+      uses: actions/checkout@v2
+      with:
+        repository: nvaccess/validateNvdaAddonMetadata
+        path: validateNvdaAddonMetadata
+    - name: Create metadata file
+      run: |
+      import json
+      import os
+      import buildVars
+      jsonFile = os.path.join(os.path.dirname(__file__), "validateNvdaAddonMetadata", "_tests", "testData", "fake", "13.0.json")
+      data = json.load(jsonFile)
     - name: Release
       uses: softprops/action-gh-release@v1
       env:
