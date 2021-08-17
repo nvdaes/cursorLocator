@@ -72,7 +72,7 @@ jobs:
         data["channel"] = "stable"
         data["URL"] = f"https://github.com/{data['publisher']}/{addonInfo['addon_name']}/releases/download/{addonInfo['addon_version']}/{addonInfo['addon_name']}-{addonInfo['addon_version']}.nvda-addon"
         data["sha256"] = "abc"
-        data["sourceURL" = f"{data['URL']}/"
+        data["sourceURL"] = f"{data['URL']}/"
         data["license"] = "GPL v2",
         data["licenseURL"] = "https://www.gnu.org/licenses/gpl-2.0.html"
         filename = addonInfo["version"] + ".json"
