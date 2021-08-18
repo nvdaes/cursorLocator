@@ -46,7 +46,7 @@ jobs:
     id: calculateSha256
       run: |
         sha256sum *.nvda-addon >> changelog.md
-          - name: Create metadata file
+    - name: Create metadata file
       run: |
         import json
         with open("fake.json") as f:
