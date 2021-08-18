@@ -51,10 +51,10 @@ jobs:
         import json
         with open("fake.json") as f:
           data = json.load(f)
-        sha256 = ""
         with open("changelog.md") as f:
-        sha256 = f.readlines()[-1].split()[0]
-      data["sha256"] = sha256
+          sha256 = f.readlines()[-1].split()[0]
+        data["sha256"] = sha256
+      shell: python
     - name: Release
       uses: softprops/action-gh-release@v1
       env:
