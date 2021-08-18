@@ -1,7 +1,7 @@
 {
 	"displayName": "Cursor Locator",
 	"description": "Reports cursor positions while typing on multiline edit controls.",
-	"homepage": "https://github.com/nvdaes/cursorLocator",
+	"homepage": "https://addons.nvda-project.org",
 	"publisher": "nvdaes",
 	"minNVDAVersion": {
 		"major": 2020,
@@ -14,8 +14,8 @@
 		"patch": 0
 	},
 	"channel": "stable",
-	"URL": "",
-	"sha256": "",
+	"URL": "https://github.com/nvdaes/cursorLocator/releases/download/1.15/cursorLocator-1.15.nvda-addon",
+	"sha256": "31a951cdc1b3bd80378451012e2004b18bfb7752ed97b4d6bfb2a2f01b265f64",
 	"sourceURL": "https://github.com/nvdaes/cursorLocator/",
 	"license": "GPL v2",
 	"licenseURL": "https://www.gnu.org/licenses/gpl-2.0.html"
