@@ -51,6 +51,7 @@ jobs:
           data = json.load(f)
         with open("changelog.md") as f:
           sha256 = f.readlines()[-1].split()[0]
+          data["URL"] = f"https://github.com/nvdaes/cursorLocator/releases/download/{${{ github.event.inputs.version }}}/cursorLocator-{${{ github.event.inputs.version }}}.nvda-addon"
         data["sha256"] = sha256
         with open("${{ github.event.inputs.version }}.json", "w") as f:
           json.dump(data, f, indent="\t")
