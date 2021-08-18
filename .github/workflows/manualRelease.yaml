@@ -43,42 +43,18 @@ jobs:
     - name: Build add-on
       run: scons
     - name: Calculate sha256
-      run: sha256sum *.nvda-addon >> changelog.md
-    - name: Create metadata file
+    id: calculateSha256
+      run: |
+        sha256sum *.nvda-addon >> changelog.md
+          - name: Create metadata file
       run: |
         import json
-        import os
-        import sys
-        sys.path.append(os.path.dirname(__file__))
-        import buildVars
-        addonInfo = buildVars.addon_info
-        data = dict()
-        data["displayName"] = addonInfo["addon_summary"]
-        data["description"] = addonInfo["addon_description"]
-        data["homepage"] = addonInfo["addon_url"]
-        data["publisher"] = "nvdaes"
-        [major, minor] = addonInfo["addon_minimumNVDAVersion"]
-        minNVDAVersion = dict()
-        minNVDAVersion["major"] = int(major)
-        minNVDAVersion["minor"] = int(minor)
-        minNVDAVersion["patch"] = 0
-        data["minNVDAVersion"] = minNVDAVersion
-        [major, minor] = addonInfo["addon_lastTestedNVDAVersion"]
-        lastTestedVersion = dict()
-        lastTestedVersion["major"] = int(major)
-        lastTestedVersion["minor"] = int(minor)
-        lastTestedVersion["patch"] = 0
-        data["lastTestedVersion"] = lastTestedVersion
-        data["channel"] = "stable"
-        data["URL"] = f"https://github.com/{data['publisher']}/{addonInfo['addon_name']}/releases/download/{addonInfo['addon_version']}/{addonInfo['addon_name']}-{addonInfo['addon_version']}.nvda-addon"
-        data["sha256"] = "abc"
-        data["sourceURL"] = f"{data['URL']}/"
-        data["license"] = "GPL v2",
-        data["licenseURL"] = "https://www.gnu.org/licenses/gpl-2.0.html"
-        filename = addonInfo["version"] + ".json"
-        with open(filename, "w", encoding="utf-8") as f:
-          json.dump(data, f, indent="\t")
-      shell: python
+        with open("fake.json") as f:
+          data = json.load(f)
+        sha256 = ""
+        with open("changelog.md") as f:
+        sha256 = f.readlines()[-1].split()[0]
+      data["sha256"] = sha256
     - name: Release
       uses: softprops/action-gh-release@v1
       env:
