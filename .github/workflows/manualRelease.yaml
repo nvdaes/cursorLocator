@@ -81,7 +81,6 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: nvaccess/validateNvdaAddonMetadata
-        path: validateNvdaAddonMetadata
         submodules: true
     - name: Install validateNvdaAddonMetadata dependencies
       run: |
@@ -100,7 +99,7 @@ jobs:
       with:
         name: changelog
     - name: Validate metadata
-      run: validateNvdaAddonMetadata/runvalidate ${{ github.event.inputs.version }}
+      run: runvalidate ${{ github.event.inputs.version }}.json
     - name: Release
       uses: softprops/action-gh-release@v1
       env:
