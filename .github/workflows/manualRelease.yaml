@@ -98,10 +98,6 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: changelog
-    - name: Validate metadata
-      run: runvalidate "${{ github.event.inputs.version }}.json"
-      
-      shell: cmd
     - name: Release
       uses: softprops/action-gh-release@v1
       env:
@@ -113,3 +109,6 @@ jobs:
           ${{ github.event.inputs.version }}.json
         body_path: changelog.md
         prerelease: ${{ endsWith(github.event.inputs.version, '-dev') }}
+    - name: Validate metadata
+      run: runvalidate "${{ github.event.inputs.version }}.json"
+      shell: cmd
