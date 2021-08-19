@@ -67,7 +67,7 @@ jobs:
         python -m pip install --upgrade wheel
         pip install -r validateNvdaAddonMetadata/requirements.txt
     - name: Validate metadata
-      run: validateNvdaAddonMetadata/runvalidate ${{ github.event.inputs.version }}.json
+      run: validateNvdaAddonMetadata/runvalidate.bat
     - name: Release
       uses: softprops/action-gh-release@v1
       env:
