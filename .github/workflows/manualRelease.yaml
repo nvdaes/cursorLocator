@@ -9,7 +9,7 @@ on:
         default: '0.0.0'
 
 jobs:
-  buildAndUpload:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -56,6 +56,26 @@ jobs:
         with open("${{ github.event.inputs.version }}.json", "w") as f:
           json.dump(data, f, indent="\t")
       shell: python
+    - name: Upload add-on
+      uses: actions/upload-artifact@v2
+      with:
+        name: nvda-addon
+        path: "*.nvda-addon"
+    - name: Upload metadata
+      uses: actions/upload-artifact@v2
+      with:
+        name: metadata
+        path: ${{ github.event.inputs.version }}.json
+    - name: Upload changelog
+      uses: actions/upload-artifact@v2
+      with:
+        name: changelog
+        path: changelog.md
+
+  validateAndUpload:
+    runs-on: windows-latest
+    needs: build
+          
     - name: Checkout validate repo
       uses: actions/checkout@v2
       with:
@@ -66,8 +86,20 @@ jobs:
       run: |
         python -m pip install --upgrade wheel
         pip install -r validateNvdaAddonMetadata/requirements.txt
+    - name: Download add-on
+      uses: actions/download-artifact@v2
+      with:
+        name: nvda-addon
+    - name: Download metadata
+      uses: actions/download-artifact@v2
+      with:
+        name: metadata
+    - name: Download changelog
+      uses: actions/download-artifact@v2
+      with:
+        name: changelog
     - name: Validate metadata
-      run: validateNvdaAddonMetadata/runvalidate buildVars.py
+      run: validateNvdaAddonMetadata/runvalidate ${{ github.event.inputs.version }}
     - name: Release
       uses: softprops/action-gh-release@v1
       env:
