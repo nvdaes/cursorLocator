@@ -99,7 +99,7 @@ jobs:
       with:
         name: changelog
     - name: Validate metadata
-      run: runvalidate ${{ github.event.inputs.version }}.json
+      run: runvalidate "${{ github.event.inputs.version }}.json"
     - name: Release
       uses: softprops/action-gh-release@v1
       env:
