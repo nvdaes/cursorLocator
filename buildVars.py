@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""Reports cursor positions while typing on multiline edit controls."""),
 	# version
-	"addon_version": "1.28",
+	"addon_version": "1.29",
 	# Author(s)
 	"addon_author": "Noelia Ruiz Martínez <nrm1977@gmail.com>",
 	# URL for the add-on documentation support
