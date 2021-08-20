@@ -1,6 +1,13 @@
 name: Checkoutthe latest addon template
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
 
 jobs:
   checkoutAddonTemplate:
@@ -8,8 +15,12 @@ jobs:
     steps:
     - name: checkout code
       uses: actions/checkout@v2
+      with:
+        path: main
     - name: checkout template
       uses: actions/checkout@v2
       with:
         repository: nvdaaddons/AddonTemplate
-
+        path: template
+    - name: Copy template
+      run: cp template/*.*~readme.md main
