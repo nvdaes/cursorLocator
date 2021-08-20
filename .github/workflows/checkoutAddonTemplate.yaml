@@ -24,6 +24,6 @@ jobs:
         path: template
     - name: Copy template
       run: |
-        cp template/buildVars.py template/manifest* template/sconstruct template/*git* main
+        cp template/buildVars.py template/manifest* template/sconstruct template/.gitignore template/.gitattributes main
         cp -R template/site_scons main
       
