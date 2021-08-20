@@ -23,4 +23,7 @@ jobs:
         repository: nvdaaddons/AddonTemplate
         path: template
     - name: Copy template
-      run: cp template/*.* main
+      run: |
+        cp template/buildVars.py template/manifest* template/sconstruct template/*git* main
+        cp -R template/site_scons main
+      
