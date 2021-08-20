@@ -23,4 +23,4 @@ jobs:
         repository: nvdaaddons/AddonTemplate
         path: template
     - name: Copy template
-      run: cp template/*.*~readme.md main
+      run: cp template/*.* main
