@@ -27,5 +27,6 @@ jobs:
         cp template/buildVars.py template/manifest* template/sconstruct template/.gitignore template/.gitattributes main
         cp -R template/site_scons main
         cd main
-        scons
+        git add .
+        git status
       
