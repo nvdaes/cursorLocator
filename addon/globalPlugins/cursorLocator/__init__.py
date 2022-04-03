@@ -59,8 +59,8 @@ class AddonSettingsPanel(SettingsPanel):
 		self.reportStartCheckBox = lineGroup.addItem(wx.CheckBox(self, label=_("&Report start of line")))
 		self.reportStartCheckBox.SetValue(config.conf["cursorLocator"]["reportStartOfLine"])
 
-		# Translators: Label for the Cursor Locator panel.
 		self.LengthEdit = lineGroup.addLabeledControl(
+			# Translators: Label for the Cursor Locator panel.
 			_("Report &line length:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=0, max=600, initial=config.conf["cursorLocator"]["reportLineLength"]
 		)
@@ -72,14 +72,14 @@ class AddonSettingsPanel(SettingsPanel):
 		)
 		sHelper.addItem(startGroup)
 
-		# Translators: Label for the Cursor Locator panel.
 		self.startHzEdit = startGroup.addLabeledControl(
+			# Translators: Label for the Cursor Locator panel.
 			_("&Pitch of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=20000, initial=config.conf["cursorLocator"]["startLinePitch"]
 		)
 
-		# Translators: Label for the Cursor Locator panel.
 		self.startLengthEdit = startGroup.addLabeledControl(
+			# Translators: Label for the Cursor Locator panel.
 			_("L&ength of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=2000, initial=config.conf["cursorLocator"]["startLineLength"]
 		)
@@ -96,14 +96,14 @@ class AddonSettingsPanel(SettingsPanel):
 		)
 		sHelper.addItem(endGroup)
 
-		# Translators: Label for the Cursor Locator panel.
 		self.endHzEdit = endGroup.addLabeledControl(
+			# Translators: Label for the Cursor Locator panel.
 			_("P&itch of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=20000, initial=config.conf["cursorLocator"]["endLinePitch"]
 		)
 
-		# Translators: Label for the Cursor Locator panel.
 		self.endLengthEdit = endGroup.addLabeledControl(
+			# Translators: Label for the Cursor Locator panel.
 			_("Le&ngth of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=20, max=2000, initial=config.conf["cursorLocator"]["endLineLength"]
 		)
