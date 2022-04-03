@@ -1,19 +1,20 @@
 # -*- coding: UTF-8 -*-
 
 # cursorLocator: Global plugin to know the cursor position when typing on multiline edit controls
-# Copyright (C) 2017-2021 Noelia Ruiz Martínez
+# Copyright (C) 2017-2022 Noelia Ruiz Martínez
 # Released under GPL 2
+
+import wx
 
 import addonHandler
 import globalPluginHandler
 import controlTypes
 import textInfos
-import treeInterceptorHandler
+from browseMode import BrowseModeDocumentTreeInterceptor
 import api
 import ui
 import tones
 import config
-import wx
 import gui
 from gui import SettingsPanel, NVDASettingsDialog, guiHelper, nvdaControls
 from scriptHandler import script
@@ -135,7 +136,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = SCRCAT_SYSTEMCARET
 
 	def __init__(self):
-		super(globalPluginHandler.GlobalPlugin, self).__init__()
+		super().__init__()
 		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
 
 	def terminate(self):
@@ -165,7 +166,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_typedCharacter(self, obj, nextHandler, ch):
 		nextHandler()
 		states = obj.states
-		if controlTypes.STATE_MULTILINE not in states or controlTypes.STATE_READONLY in states:
+		if controlTypes.State.MULTILINE not in states or controlTypes.State.READONLY in states:
 			return
 		if not ord(ch) >= 32:
 			return
@@ -196,7 +197,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_reportLineLength(self, gesture):
 		obj = api.getFocusObject()
 		ti = obj.treeInterceptor
-		if isinstance(ti, treeInterceptorHandler.DocumentTreeInterceptor) and not ti.passThrough:
+		if isinstance(ti, BrowseModeDocumentTreeInterceptor) and not ti.passThrough:
 			obj = ti
 		try:
 			info = obj.makeTextInfo(textInfos.POSITION_CARET)
