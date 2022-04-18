@@ -1,6 +1,6 @@
 # Cursor Locator #
-* Author: Noelia Ruiz Martínez
-* Download [stable version, compatible with NVDA 2022.1 and beyond][1]
+* Author: Noelia Ruiz Martínez.
+* Download [stable version][1] (compatible with NVDA 2022.1 and beyond).
 
 This add-on makes possible to know the position of the system caret respect to the start of the current line, while typing to add text in multiline controls.
 
