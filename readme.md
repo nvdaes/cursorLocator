@@ -1,6 +1,7 @@
 # Cursor Locator #
 * Author: Noelia Ruiz Martínez.
-* Compatibility: 2020.4.
+* NVDA compatibility: 2022.1 and beyond.
+* Download [stable version][1]
 
 This add-on makes possible to know the position of the system caret respect to the start of the current line, while typing to add text in multiline controls.
 
@@ -21,7 +22,7 @@ It provides the following options:
 
 ## Commands ##
 
-You can modify the gestures to the following commands, trought the NVDA's menu > Preferences submenu > Input gestures dialog.
+You can modify the gestures to the following commands trought the NVDA's menu, Preferences submenu, Input gestures dialog:
 
 * NVDA+control+shift+l: When possible, reports the lenght of the current line (System caret category).
 * Not assigned: Shows the Cursor Locator settings dialog (Config category).
@@ -29,3 +30,4 @@ You can modify the gestures to the following commands, trought the NVDA's menu >
 ## Changes for 1.0 ##
 * Initial version
 
+[1]: https://addons.nvda-project.org/files/get.php?file=cursorLocator
