@@ -1,0 +1,15 @@
+name: Test with unittest
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  test:
+    uses: nvdaes/nvdaAddonWorkflows/.github/workflows/testWithUnittest.yaml@main
+    
