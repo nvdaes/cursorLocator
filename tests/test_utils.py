@@ -22,10 +22,11 @@ del sys.path[-1]
 
 confspec = {
 	"reportLineLength": 0,
-		"maxStartNotificationNumber": 0,
+	"maxStartNotificationNumber": 0,
 	"maxEndNotificationNumber": 0
 }
 config.conf["cursorLocator"] = confspec
+
 
 class TestUtilsConfigFunctions(TestCase):
 
@@ -35,11 +36,17 @@ class TestUtilsConfigFunctions(TestCase):
 
 	def test_getMaxStartNotificationNumber(self):
 		maxStartNotificationNumber = config.conf["cursorLocator"]["maxStartNotificationNumber"]
-		self.assertEqual(utils.getMaxStartNotificationNumber(), maxStartNotificationNumber, f"shold be {maxStartNotificationNumber}")
+		self.assertEqual(
+			utils.getMaxStartNotificationNumber(), maxStartNotificationNumber,
+			f"shold be {maxStartNotificationNumber}"
+		)
 
 	def test_getMaxEndNotificationNumber(self):
 		maxEndNotificationNumber = config.conf["cursorLocator"]["maxEndNotificationNumber"]
-		self.assertEqual(utils.getMaxEndNotificationNumber(), maxEndNotificationNumber, f"shold be {maxEndNotificationNumber}")
+		self.assertEqual(
+			utils.getMaxEndNotificationNumber(), maxEndNotificationNumber,
+			f"shold be {maxEndNotificationNumber}"
+		)
 
 
 class TestUtilsReportStart(TestCase):
@@ -47,12 +54,12 @@ class TestUtilsReportStart(TestCase):
 	def setUp(self):
 		self.text = "H"
 		self.reportLineLength = 1
-		config.conf["cursorLocator"]["maxStartNotificationNumber"] =  1
+		config.conf["cursorLocator"]["maxStartNotificationNumber"] = 1
 
 	def tearDown(self):
 		self.text = None
 		self.reportLineLength = 0
-		config.conf["cursorLocator"]["maxStartNotificationNumber"]= 0
+		config.conf["cursorLocator"]["maxStartNotificationNumber"] = 0
 
 	def test_valid(self):
 		self.assertTrue(utils.shouldReportStartOfLine(self.text), "should be true")
@@ -64,7 +71,7 @@ class TestUtilsReportStart(TestCase):
 	def test_MaxStartNotificationNumber2(self):
 		config.conf["cursorLocator"]["maxStartNotificationNumber"] = 2
 		self.assertTrue(utils.shouldReportStartOfLine(self.text), "should be true")
-		self.text= "He"
+		self.text = "He"
 		self.assertTrue(utils.shouldReportStartOfLine(self.text), "should be true")
 		self.text = "Hel"
 		self.assertFalse(utils.shouldReportStartOfLine(self.text), "should be false")
@@ -84,12 +91,12 @@ class TestUtilsReportEnd(TestCase):
 	def setUp(self):
 		self.text = "Hello"
 		config.conf["cursorLocator"]["reportLineLength"] = 5
-		config.conf["cursorLocator"]["maxEndNotificationNumber"] =  1
+		config.conf["cursorLocator"]["maxEndNotificationNumber"] = 1
 
 	def tearDown(self):
 		self.text = None
 		config.conf["cursorLocator"]["reportLineLength"] = 0
-		config.conf["cursorLocator"]["maxEndNotificationNumber"]= 0
+		config.conf["cursorLocator"]["maxEndNotificationNumber"] = 0
 
 	def test_valid(self):
 		self.assertTrue(utils.shouldReportEndOfLine(self.text), "should be true")
