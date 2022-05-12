@@ -20,6 +20,8 @@ from gui import SettingsPanel, NVDASettingsDialog, guiHelper, nvdaControls
 from scriptHandler import script
 from globalCommands import SCRCAT_SYSTEMCARET, SCRCAT_CONFIG
 
+from . import utils
+
 addonHandler.initTranslation()
 
 # Constants
@@ -27,8 +29,9 @@ ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 ADDON_PANEL_TITLE = ADDON_SUMMARY
 
 confspec = {
-	"reportStartOfLine": "boolean(default=True)",
 	"reportLineLength": "integer(default=80)",
+	"maxStartNotificationNumber": "integer(default=0)",
+	"maxEndNotificationNumber": "integer(default=0)",
 	"startLinePitch": "integer(default=400)",
 	"startLineLength": "integer(default=50)",
 	"endLinePitch": "integer(default=1000)",
@@ -55,14 +58,22 @@ class AddonSettingsPanel(SettingsPanel):
 		)
 		sHelper.addItem(lineGroup)
 
-		# Translators: Label for the Cursor Locator panel.
-		self.reportStartCheckBox = lineGroup.addItem(wx.CheckBox(self, label=_("&Report start of line")))
-		self.reportStartCheckBox.SetValue(config.conf["cursorLocator"]["reportStartOfLine"])
-
 		self.LengthEdit = lineGroup.addLabeledControl(
 			# Translators: Label for the Cursor Locator panel.
 			_("Report &line length:"), nvdaControls.SelectOnFocusSpinCtrl,
 			min=0, max=600, initial=config.conf["cursorLocator"]["reportLineLength"]
+		)
+
+		self.maxRepeatStartEdit = lineGroup.addLabeledControl(
+			# Translators: Label for the Cursor Locator panel.
+			_("Ma&ximum number of beeps for start of line notification:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=0, max=600, initial=config.conf["cursorLocator"]["maxStartNotificationNumber"]
+		)
+
+		self.maxRepeatEndEdit = lineGroup.addLabeledControl(
+			# Translators: Label for the Cursor Locator panel.
+			_("Max&imum number of beeps for end of line notification:"), nvdaControls.SelectOnFocusSpinCtrl,
+			min=0, max=600, initial=config.conf["cursorLocator"]["maxEndNotificationNumber"]
 		)
 
 		# Translators: Label for a group of Cursor Locator options.
@@ -113,9 +124,6 @@ class AddonSettingsPanel(SettingsPanel):
 		self.testEndSoundButton = endGroup.addItem(wx.Button(self, label=label))
 		self.testEndSoundButton.Bind(wx.EVT_BUTTON, self.onTestEndSound)
 
-	def postInit(self):
-		self.reportStartCheckBox.SetFocus()
-
 	def onTestStartSound(self, evt):
 		tones.beep(self.startHzEdit.GetValue(), self.startLengthEdit.GetValue())
 
@@ -123,8 +131,9 @@ class AddonSettingsPanel(SettingsPanel):
 		tones.beep(self.endHzEdit.GetValue(), self.endLengthEdit.GetValue())
 
 	def onSave(self):
-		config.conf["cursorLocator"]["reportStartOfLine"] = self.reportStartCheckBox.GetValue()
 		config.conf["cursorLocator"]["reportLineLength"] = self.LengthEdit.GetValue()
+		config.conf["cursorLocator"]["maxStartNotificationNumber"] = self.maxRepeatStartEdit.GetValue()
+		config.conf["cursorLocator"]["maxEndNotificationNumber"] = self.maxRepeatEndEdit.GetValue()
 		config.conf["cursorLocator"]["startLinePitch"] = self.startHzEdit.GetValue()
 		config.conf["cursorLocator"]["startLineLength"] = self.startLengthEdit.GetValue()
 		config.conf["cursorLocator"]["endLinePitch"] = self.endHzEdit.GetValue()
@@ -170,21 +179,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		if not ord(ch) >= 32:
 			return
-		reportStart = config.conf["cursorLocator"]["reportStartOfLine"]
-		reportLineLength = config.conf["cursorLocator"]["reportLineLength"]
-		startPitch = config.conf["cursorLocator"]["startLinePitch"]
-		startLength = config.conf["cursorLocator"]["startLineLength"]
-		endPitch = config.conf["cursorLocator"]["endLinePitch"]
-		endLength = config.conf["cursorLocator"]["endLineLength"]
-		if not reportStart and reportLineLength == 0:
-			return
 		try:
 			info = obj.makeTextInfo(textInfos.POSITION_CARET)
 			info.expand(textInfos.UNIT_LINE)
 			text = self.removeCarriageReturn(info.text)
-			if reportStart and len(text) == 1:
+			if utils.shouldReportStartOfLine(text):
+				startPitch = config.conf["cursorLocator"]["startLinePitch"]
+				startLength = config.conf["cursorLocator"]["startLineLength"]
 				tones.beep(startPitch, startLength)
-			if reportLineLength > 0 and len(text) == reportLineLength:
+			if utils.shouldReportEndOfLine(text):
+				endPitch = config.conf["cursorLocator"]["endLinePitch"]
+				endLength = config.conf["cursorLocator"]["endLineLength"]
 				tones.beep(endPitch, endLength)
 		except Exception as e:
 			raise e
