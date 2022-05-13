@@ -29,6 +29,11 @@ You can modify the gestures to the following commands trought the NVDA's menu, P
 * NVDA+control+shift+l: When possible, reports the lenght of the current line (System caret category).
 * Not assigned: Shows the Cursor Locator settings dialog (Config category).
 
+
+## Changes for 2.0 ##
+* Added ability to repeat notifications when reaching end and start of line.
+* Added support for Office documents, and Notepad on Windows 11.
+
 ## Changes for 1.0 ##
 * Initial version
 
