@@ -175,7 +175,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_typedCharacter(self, obj, nextHandler, ch):
 		nextHandler()
 		states = obj.states
-		if controlTypes.State.MULTILINE not in states or controlTypes.State.READONLY in states:
+		if controlTypes.State.MULTILINE not in states and obj.role != controlTypes.Role.DOCUMENT:
 			return
 		if not ord(ch) >= 32:
 			return
