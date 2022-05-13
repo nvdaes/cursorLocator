@@ -2,7 +2,7 @@
 * Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 * Download [stable version][1] (compatible with NVDA 2022.1 and beyond).
 
-This add-on makes possible to know the position of the system caret respect to the start of the current line, while typing to add text in multiline controls.
+This add-on makes possible to know the position of the system caret respect to the start of the current line, while typing to add text in documents or multiline controls.
 
 This feature deppends on the visual appearance of applications. Therefore, you may need to disable line adjustment or configure the add-on for different programs.
 
