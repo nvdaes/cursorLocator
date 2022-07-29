@@ -208,6 +208,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			info = obj.makeTextInfo(textInfos.POSITION_CARET)
 			info.expand(textInfos.UNIT_LINE)
 			lineLen = len(self.removeCarriageReturn(info.text))
-			ui.message("Line length: %d" % lineLen)
+			# Translators: message to report line length.
+			ui.message(_("Line length: %d") % lineLen)
 		except Exception:
 			pass
