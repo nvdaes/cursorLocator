@@ -8,11 +8,13 @@ on:
         required: true
         default: '0.0.0'
       prerelease:
-        description: 'True if this is a prerelease'
+        description: 'Prerelease'
         type: boolean
+        default: false
       publishOnStore:
         description: 'Publish on add-on datastore'
         type: boolean
+        default: true
       channel:
         description: 'Add-on channel'
         default: stable
