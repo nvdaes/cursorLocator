@@ -111,7 +111,7 @@ jobs:
     
     - name: Download add-on
       run: |
-        curl --location --output addon.nvda-addon ${{ github.event.repository.html_url }}/releases/download/${{ github.event.inputs.version }}/${{ github.event.repository.name }}-${{ github.event.inputs.version }}.nvda-addon
+        curl --location --output addon.nvda-addon ${{ github.event.repository.html_url }}/releases/download/${{ inputs.version }}/${{ github.event.repository.name }}-${{ inputs.version }}.nvda-addon
     - name: Create json
       run: |
         validation\runcreatejson -f addon.nvda-addon --dir store\addons --channel=${{ inputs.channel }} --publisher=${{ github.event.sender.login }} --sourceUrl=${{ github.event.repository.html_url }}/ --url=${{ github.event.repository.html_url }}/releases/download/${{ inputs.version }}/${{ github.event.repository.name }}-${{ inputs.version }}.nvda-addon --licName="${{ inputs.license }}" --licUrl=${{ inputs.licenseURL }}
@@ -120,8 +120,8 @@ jobs:
       with:
         token: ${{ secrets.CHECKOUT_ACCESS_TOKEN }}
         path: store
-        commit-message: Add ${{ github.event.repository.name  }}-${{ inputs.version }} add-on
-        branch: ${{ github.event.repository.name}}-${{ github.event.inputs.version }}
+        commit-message: Add ${{ github.event.repository.name  }} ${{ inputs.version }} add-on
+        branch: ${{ github.event.repository.name }}-${{ inputs.version }}
         delete-branch: true
-        title: Add ${{ github.event.repository.name  }}-${{ inputs.version }} add-on
+        title: Add ${{ github.event.repository.name  }} ${{ inputs.version }} add-on
         push-to-fork: ${{ github.event.sender.login }}/addon-datastore
