@@ -17,32 +17,25 @@ diálogo Opcións.
 
 Proporciona as seguintes opcións:
 
-* Report line length (anunciar lonxitude de liña): Podes escribir ou
-  escoller unha lonxitude de liña (número de caracteres entre 0 e 600), que
-  se anunciará cun ton alto cando se acade. (O valor por defecto é 80
-  caracteres).
-* Maximum number of beeps for start of line notification (número máximo de
-  pitidos para a notificación de inicio de liña): Podes escribir ou
-  seleccionar un valor entre 0 e 600. O valor por defecto é 0.
-* Maximum number of beeps for end of line notification (número máximo de
-  pitidos para a notificación de final de liña): Podes escribir ou
-  seleccionar un valor entre 0 e 600. O valor por defecto é 0.
-* Pitch of sound for start of line (ton do son para inicio de liña): Podes
-  escribir ou seleccionar un valor entre 20 e 20000. (O valor por defecto é
-  400 hercios).
-* Length of sound for start of line (duración do son para inicio de liña):
-  Podes seleccionar un valor entre 20 e 2000. (O valor por defecto é 50
-  milisegundos).
-* Test sound for start of line (probar son para inicio de liña): Preme este
-  botón para probar o son configurado para inicio de liña.
-* Pitch of sound for end of line (ton do son para final de liña): Podes
-  escribir ou seleccionar un valor entre 20 e 20000. (O valor por defecto é
-  1000 hercios).
-* Length of sound for end of line (duración do son para final de liña):
-  Podes seleccionar un valor entre 20 e 2000. (O valor por defecto é 50
-  milisegundos).
-* Test sound for end of line (probar son para final de liña): Preme este
-  botón para probar o son configurado para inicio de liña.
+* Anunciar lonxitude de liña: Podes escribir ou escoller unha lonxitude de
+  liña (número de caracteres entre 0 e 600), que se anunciará cun ton alto
+  cando se acade. (O valor por defecto é 80 caracteres).
+* Número máximo de pitidos para a notificación de inicio de liña: Podes
+  escribir ou seleccionar un valor entre 0 e 600. O valor por defecto é 0.
+* Número máximo de pitidos para a notificación de final de liña): Podes
+  escribir ou seleccionar un valor entre 0 e 600. O valor por defecto é 0.
+* Ton do son para inicio de liña): Podes escribir ou seleccionar un valor
+  entre 20 e 20000. (O valor por defecto é 400 hercios).
+* Duración do son para inicio de liña: Podes seleccionar un valor entre 20 e
+  2000. (O valor por defecto é 50 milisegundos).
+* Probar son para inicio de liña): Preme este botón para probar o son
+  configurado para inicio de liña.
+* Ton do son para final de liña: Podes escribir ou seleccionar un valor
+  entre 20 e 20000. (O valor por defecto é 1000 hercios).
+* Duración do son para final de liña: Podes seleccionar un valor entre 20 e
+  2000. (O valor por defecto é 50 milisegundos).
+* Probar son para final de liña: Preme este botón para probar o son
+  configurado para inicio de liña.
 
 ## Ordes ##
 
