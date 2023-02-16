@@ -3,11 +3,11 @@ name: Publish to add-on datastore
 on:
   workflow_dispatch:
     inputs:
-      downloadUrl:  
+      url:  
         description: 'Add-on download URL'
         required: true
-      url:  
-        description: 'URL to get info about the add-on'
+      sourceUrl:  
+        description: 'URL of source code'
         required: true
       channel:
         description: 'Add-on channel for store'
@@ -45,14 +45,13 @@ jobs:
         curl --location --output addon.nvda-addon ${{ inputs.url }}
     - name: Create json
       run: |
-        validation\runcreatejson -f addon.nvda-addon --dir store\addons --channel=${{ inputs.channel }} --publisher=${{ github.event.sender.login }} --sourceUrl=${{ inputs.url }}/ --url=${{ inputs.downloadUrl }} --licName="${{ inputs.license }}" --licUrl=${{ inputs.licenseURL }}
+        validation\runcreatejson -f addon.nvda-addon --dir store\addons --channel=${{ inputs.channel }} --publisher=${{ github.event.sender.login }} --sourceUrl=${{ inputs.sourceUrl }}/ --url=${{ inputs.downloadUrl }} --licName="${{ inputs.license }}" --licUrl=${{ inputs.licenseURL }}
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:
         token: ${{ secrets.PR_ACCESS_TOKEN }}
         path: store
-        commit-message: Add ${{ github.event.repository.name }} ${{ inputs.version }} add-on
-        branch: ${{ github.event.repository.name}}-${{ inputs.version }}
+        commit-message: Add add-on
         delete-branch: true
         title: Add add-on
         push-to-fork: ${{ github.event.sender.login }}/addon-datastore
