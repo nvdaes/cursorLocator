@@ -45,7 +45,7 @@ jobs:
         curl --location --output addon.nvda-addon ${{ inputs.url }}
     - name: Create json
       run: |
-        validation\runcreatejson -f addon.nvda-addon --dir store\addons --channel=${{ inputs.channel }} --publisher=${{ github.event.sender.login }} --sourceUrl=${{ inputs.sourceUrl }}/ --url=${{ inputs.downloadUrl }} --licName="${{ inputs.license }}" --licUrl=${{ inputs.licenseURL }}
+        validation\runcreatejson -f addon.nvda-addon --dir store\addons --channel=${{ inputs.channel }} --publisher=${{ github.event.sender.login }} --sourceUrl=${{ inputs.sourceUrl }}/ --url=${{ inputs.url }} --licName="${{ inputs.license }}" --licUrl=${{ inputs.licenseURL }}
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:
