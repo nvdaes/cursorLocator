@@ -29,6 +29,8 @@ You can modify the gestures to the following commands trought the NVDA's menu, P
 * NVDA+control+shift+l: When possible, reports the lenght of the current line (System caret category).
 * Not assigned: Shows the Cursor Locator settings dialog (Config category).
 
+## Changes for 3.0 ##
+* Compatible with NVDA 2023.1.
 
 ## Changes for 2.0 ##
 * Added ability to repeat notifications when reaching end and start of line.
