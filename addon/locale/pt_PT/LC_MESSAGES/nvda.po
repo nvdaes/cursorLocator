@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Localizador de Cursor\n"
 "POT-Creation-Date: 2022-06-22 14:40+0100\n"
-"PO-Revision-Date: 2022-06-22 14:46+0100\n"
+"PO-Revision-Date: 2023-02-20 19:54+0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes <ampa4374@gmail."
 "com> e Rui Fontes <Rui Fontes <rui.fontes@tiflotecnia.com> (22-06-2022)\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: ../../../globalPlugins\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -77,17 +77,19 @@ msgid "Reports the length of the current line."
 msgstr "Indica o tamanho da linha actual."
 
 #. Translators: message to report line length.
-#, fuzzy, python-format
+#, python-format
 msgid "Line length: %d"
-msgstr "Indicar &tamanho de linha:"
+msgstr "Comprimento da linha: %d"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Cursor Locator"
-msgstr ""
+msgstr "Localizador de Cursor"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Reports cursor positions while typing on multiline edit controls."
 msgstr ""
+"Indica as posições do cursor ao escrever  em controlos de edição de "
+"várias linhas."
