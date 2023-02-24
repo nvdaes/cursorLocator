@@ -1,4 +1,5 @@
 # Kohdistimen paikannin #
+
 * Tekijät: Noelia Ruiz Martínez, Sergio Gómez Codina.
 * Lataa [vakaa versio][1] (yhteensopiva NVDA 2022.1:n ja uudempien kanssa).
 
@@ -47,6 +48,8 @@ Asetukset-alivalikko -> Näppäinkomennot-valintaikkuna:
 * Ei määritetty: Näyttää Kohdistimen paikantimen asetusvalintaikkunan
   (Asetukset-kategoria).
 
+## Muutokset versiossa 3.0 ##
+* Yhteensopiva NVDA 2023.1:n kanssa.
 
 ## Muutokset versiossa 2.0 ##
 * Lisätty mahdollisuus ilmoitusten toistamiseen rivin lopussa ja alussa.
