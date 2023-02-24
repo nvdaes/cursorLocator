@@ -16,12 +16,16 @@ on:
         options:
         - stable
         - beta
+        - dev
       license:
         description: 'Add-on license'
         default: 'GPL v2'
       licenseURL:
         description: 'Add-on license URL'
         default: 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.html'
+      title:
+        description: 'PR title'
+        default: 'Add addonName.version'
 
 jobs:
 
@@ -47,11 +51,18 @@ jobs:
       run: |
         validation\runcreatejson -f addon.nvda-addon --dir store\addons --channel=${{ inputs.channel }} --publisher=${{ github.event.sender.login }} --sourceUrl=${{ inputs.sourceUrl }}/ --url=${{ inputs.url }} --licName="${{ inputs.license }}" --licUrl=${{ inputs.licenseURL }}
     - name: Create Pull Request
+      id: cpr
       uses: peter-evans/create-pull-request@v4
       with:
         token: ${{ secrets.PR_ACCESS_TOKEN }}
         path: store
-        commit-message: Add add-on
+        commit-message: ${{ inputs.title }}
         delete-branch: true
-        title: Add add-on
+        title: ${{ inputs.title }}
         push-to-fork: ${{ github.event.sender.login }}/addon-datastore
+      - name: Enable Pull Request Automerge
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        uses: peter-evans/enable-pull-request-automerge@v2
+        with:
+          token: ${{ secrets.PR_ACCESS_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
