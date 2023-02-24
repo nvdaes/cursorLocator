@@ -1,5 +1,6 @@
 # Cursor Locator #
-* 作者：Noelia Ruiz Martínez, Sergio Gómez Codina.
+
+* 作者： Noelia Ruiz Martínez, Sergio Gómez Codina.
 * 下载 [稳定版][1]（兼容 NVDA 2022.1 及更高版本）。
 
 此插件可以在文档或多行控件中输入文本时了解系统输入焦点相对于当前行开头的位置。
@@ -29,6 +30,8 @@
 * NVDA+control+shift+l：如果可能，报告当前行的长度（系统输入焦点）。
 * 未分配：显示 Cursor Locator 设置对话框（配置）。
 
+## 3.0 的变化 ##
+* 兼容 NVDA 2023.1。
 
 ## 2.0 的变化 ##
 * 添加了在到达行尾和行首时重复提示的功能。

@@ -1,4 +1,5 @@
 # Cursor Locator #
+
 * Autores: Noelia Ruiz Martínez, Sergio Gómez Codina.
 * Descargar [versión estable][1] (compatible con NVDA 2022.1 e posterior).
 
@@ -47,6 +48,8 @@ NVDA; submenú Preferencias, diálogo Xestos de entrada:
 * Sen asignar: Amosa o diálogo de configuración de Cursor Locator (categoría
   Configuración).
 
+## Changes for 3.0 ##
+* Compatible with NVDA 2023.1.
 
 ## Cambios para 2.0 ##
 * Engadida a posibilidade de repetir notificacións ao acadar o final e o

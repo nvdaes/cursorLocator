@@ -1,4 +1,5 @@
 # Cursor Locator #
+
 * Autorzy: Noelia Ruiz Martínez, Sergio Gómez Codina.
 * Pobierz [stabilna wersja][1] (kompatybilna z NVDA 2022.1 i nowszymi)
 
@@ -49,6 +50,8 @@ Preferencje, oknie dialogowym Gesty wprowadzania:
 * Nieprzypisane: Wyświetla okno dialogowe Ustawień lokalizatora kursorów
   (kategoria Konfiguracja).
 
+## Changes for 3.0 ##
+* Compatible with NVDA 2023.1.
 
 ## Zmiany w wersji 2.0 ##
 * Dodano możliwość powtarzania powiadomień po dotarciu do końca i początku

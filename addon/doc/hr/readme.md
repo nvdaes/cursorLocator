@@ -1,4 +1,5 @@
 # Lokator kursora (Cursor Locator) #
+
 * Autori: Noelia Ruiz Martínez, Sergio Gómez Codina.
 * Preuzmi [stabilnu verziju][1] (kompatibilna s NVDA 2022.1 i novijom)
 
@@ -47,6 +48,8 @@ podizbornik Postavke, dijaloški okvir za ulazne geste:
 * Nije dodijeljeno: Prikazuje dijaloški okvir postavki za „Lokator kursora”
   (kategorija konfiguracije).
 
+## Promjene u verziji 3.0 ##
+* Kompatibilno s NVDA čitačem 2023.1.
 
 ## Promjene u verziji 2.0 ##
 * Dodana je mogućnost ponavljanja obavijesti kad se dosegne kraja i početka
