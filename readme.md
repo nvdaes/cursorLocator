@@ -40,4 +40,3 @@ You can modify the gestures to the following commands trought the NVDA's menu, P
 * Initial version
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator
-
