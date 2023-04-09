@@ -49,8 +49,8 @@ Untermenü Einstellungen, Dialogfeld für die Tastenbefehle ändern:
 * Nicht zugewiesen: Zeigt den Einstellungsdialog für den Cursor Locator an
   (Konfigurationskategorie).
 
-## Changes for 3.0 ##
-* Compatible with NVDA 2023.1.
+## Änderungen für 3.0 ##
+* Kompatibel mit NVDA 2023.1.
 
 ## Änderungen in 2.0 ##
 * Es besteht die Möglichkeit, Benachrichtigungen zu wiederholen, wenn das
