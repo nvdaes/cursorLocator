@@ -50,8 +50,8 @@ Preferencje, oknie dialogowym Gesty wprowadzania:
 * Nieprzypisane: Wyświetla okno dialogowe Ustawień lokalizatora kursorów
   (kategoria Konfiguracja).
 
-## Changes for 3.0 ##
-* Compatible with NVDA 2023.1.
+## Zmiany w wersji 3.0 ##
+* Kompatybilny z NVDA 2023.1.
 
 ## Zmiany w wersji 2.0 ##
 * Dodano możliwość powtarzania powiadomień po dotarciu do końca i początku
