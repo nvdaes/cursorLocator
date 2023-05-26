@@ -1,95 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the cursorLocator package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Localizador de Cursor\n"
-"POT-Creation-Date: 2022-06-22 14:40+0100\n"
-"PO-Revision-Date: 2023-04-17 21:52+0100\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes <ampa4374@gmail."
-"com> e Rui Fontes <Rui Fontes <rui.fontes@tiflotecnia.com> (22-06-2022)\n"
-"Language: pt\n"
+"Project-Id-Version: İmleç konumlandırıcı 3.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2023-02-24 03:30+0000\n"
+"PO-Revision-Date: 2023-05-20 16:41+0300\n"
+"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.2\n"
-"X-Poedit-Basepath: ../../../globalPlugins\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #. Translators: Description of the Cursor Locator panel.
 msgid "Configure {}"
-msgstr "Configurar {}"
+msgstr "Yapılandır {}"
 
 #. Translators: Label for a group of Cursor Locator options.
 msgid "Line properties"
-msgstr "Propriedades de linha"
+msgstr "Satır özellikleri"
 
 #. Translators: Label for the Cursor Locator panel.
 msgid "Report &line length:"
-msgstr "Indicar &tamanho de linha:"
+msgstr "Satır uzun&luğunu bildir:"
 
 #. Translators: Label for the Cursor Locator panel.
 msgid "Ma&ximum number of beeps for start of line notification:"
-msgstr "Número ma&ximum de bips para notificação de início de linha:"
+msgstr "Satır başı bildirimi için maksim&um bip sayısı:"
 
 #. Translators: Label for the Cursor Locator panel.
 msgid "Max&imum number of beeps for end of line notification:"
-msgstr "&Número máximo e mínimo de bipes para notificação de fim de linha:"
+msgstr "Satır sonu bildirimi için maks&imum bip sayısı:"
 
 #. Translators: Label for a group of Cursor Locator options.
 msgid "Sound for start of line"
-msgstr "Som de princípio de linha"
+msgstr "Satır başı için ses"
 
 #. Translators: Label for the Cursor Locator panel.
 msgid "&Pitch of sound for start of line:"
-msgstr "&Tom do som de princípio de linha:"
+msgstr "Satır başı için ses &perdesi:"
 
 #. Translators: Label for the Cursor Locator panel.
 msgid "L&ength of sound for start of line:"
-msgstr "&Duração do som de princípio de linha:"
+msgstr "Satır başı için s&es uzunluğu:"
 
 #. Translators: Label for the Cursor Locator panel.
 msgid "&Test sound for start of line"
-msgstr "&Testar som de princípio de linha"
+msgstr "Satır başı sesini &Test et"
 
 #. Translators: Label for a group of Cursor Locator options.
 msgid "Sound for end of line"
-msgstr "Som de fim de linha"
+msgstr "Satır sonu için ses"
 
 #. Translators: Label for the Cursor Locator panel.
 msgid "P&itch of sound for end of line:"
-msgstr "T&om do som de fim de linha:"
+msgstr "Satır sonu &için ses perdesi:"
 
 #. Translators: Label for the Cursor Locator panel.
 msgid "Le&ngth of sound for end of line:"
-msgstr "D&uração do som de fim de linha:"
+msgstr "Satır so&nu için ses uzunluğu:"
 
 #. Translators: Label for the Cursor Locator panel.
 msgid "Test s&ound for end of line"
-msgstr "Testar s&om de fim de linha"
+msgstr "Satır s&onu sesini test et"
 
 #. Translators: Message presented in input mode.
 msgid "Shows the {} settings."
-msgstr "Mostra as configurações {}."
+msgstr "{} ayarlarını gösterir."
 
 #. Translators: Message presented in input help mode.
 msgid "Reports the length of the current line."
-msgstr "Indica o tamanho da linha actual."
+msgstr "Geçerli satırın uzunluğunu bildirir."
 
 #. Translators: message to report line length.
 #, python-format
 msgid "Line length: %d"
-msgstr "Comprimento da linha: %d"
+msgstr "Satır uzunluğu: %d"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Cursor Locator"
-msgstr "Localizador de Cursor"
+msgstr "İmleç Konumlandırıcı"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Reports cursor positions while typing on multiline edit controls."
-msgstr ""
-"Indica as posições do cursor ao escrever  em controlos de edição de "
-"várias linhas."
+msgstr "Çok satırlı düzenleme alanlarında yazarken imleç konumlarını bildirir."
