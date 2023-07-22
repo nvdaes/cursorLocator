@@ -16,7 +16,8 @@ import ui
 import tones
 import config
 import gui
-from gui import SettingsPanel, NVDASettingsDialog, guiHelper, nvdaControls
+from gui import guiHelper, nvdaControls
+from gui.settingsDialogs import NVDASettingsDialog, SettingsPanel
 from scriptHandler import script
 from globalCommands import SCRCAT_SYSTEMCARET, SCRCAT_CONFIG
 
@@ -37,7 +38,6 @@ confspec = {
 	"endLinePitch": "integer(default=1000)",
 	"endLineLength": "integer(default=50)",
 }
-config.conf.spec["cursorLocator"] = confspec
 
 
 class AddonSettingsPanel(SettingsPanel):
@@ -146,13 +146,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
+		config.conf.spec["cursorLocator"] = confspec
 		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
 
 	def terminate(self):
 		NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 
 	def onSettings(self, evt):
-		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
+		gui.mainFrame.popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
 
 	@script(
 		# Translators: Message presented in input mode.
