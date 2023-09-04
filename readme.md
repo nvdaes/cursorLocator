@@ -1,6 +1,5 @@
 # Cursor Locator #
 * Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
-* Download [stable version][1] (compatible with NVDA 2022.1 and beyond).
 
 This add-on makes possible to know the position of the system caret respect to the start of the current line, while typing to add text in documents or multiline controls.
 
@@ -39,4 +38,4 @@ You can modify the gestures to the following commands trought the NVDA's menu, P
 ## Changes for 1.0 ##
 * Initial version
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator
+
