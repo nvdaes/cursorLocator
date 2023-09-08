@@ -1,7 +1,6 @@
 # İmleç Konumlandırıcı #
 
 * Yazarlar: Noelia Ruiz Martínez, Sergio Gómez Codina.
-* [Kararlı sürümü indir][1] (NVDA 2022.1 ve sonrası ile uyumlu).
 
 Bu eklenti, belgelere veya çok satırlı kontrollere metin eklemek için
 yazarken, sistem imlecinin geçerli satırın başlangıcına göre konumunu
@@ -38,7 +37,7 @@ Aşağıdaki seçenekleri sağlar:
 * Satır sonu için sesi test et: Satır sonu için yapılandırılmış sesi test
   etmek için bu düğmeye basın.
 
-## komutlar ##
+## Komutlar ##
 
 NVDA menüsü, Tercihler alt menüsü, Girdi hareketleri iletişim kutusu
 aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
@@ -60,5 +59,3 @@ aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
 * İlk sürüm
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator

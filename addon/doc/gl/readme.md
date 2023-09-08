@@ -1,7 +1,6 @@
 # Cursor Locator #
 
 * Autores: Noelia Ruiz Martínez, Sergio Gómez Codina.
-* Descargar [versión estable][1] (compatible con NVDA 2022.1 e posterior).
 
 Este complemento permite coñecer a posición do cursor do sistema con
 respecto ó inicio da liña actual, mentres se escribe para engadir texto a
@@ -60,5 +59,3 @@ NVDA; submenú Preferencias, diálogo Xestos de entrada:
 * Versión inicial
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator
