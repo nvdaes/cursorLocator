@@ -1,7 +1,6 @@
 # Kohdistimen paikannin #
 
 * Tekijät: Noelia Ruiz Martínez, Sergio Gómez Codina.
-* Lataa [vakaa versio][1] (yhteensopiva NVDA 2022.1:n ja uudempien kanssa).
 
 Tämän lisäosan avulla on mahdollista selvittää järjestelmäkohdistimen
 sijainti suhteessa nykyisen rivin alkuun lisätessäsi tekstiä asiakirjoihin
@@ -59,5 +58,3 @@ Asetukset-alivalikko -> Näppäinkomennot-valintaikkuna:
 * Ensimmäinen versio
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator

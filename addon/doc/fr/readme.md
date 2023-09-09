@@ -1,7 +1,6 @@
 # Cursor Locator #
 
 * Auteurs: Noelia Ruiz Martínez, Sergio Gómez Codina.
-* Télécharger [version stable][1] (compatible avec NVDA 2022.1 et au-delà).
 
 Cette extension permet de connaître la position du curseur du système par
 rapport au début de la ligne en cours lors de la saisie pour ajouter du
@@ -68,5 +67,3 @@ NVDA, sous-menu Préférences, boîte de dialogue Gestes de commandes.
 * Première version
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator
