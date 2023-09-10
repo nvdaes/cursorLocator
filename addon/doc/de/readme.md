@@ -1,7 +1,6 @@
 # Cursor ermitteln #
 
 * Autoren: Noelia Ruiz Martínez, Sergio Gómez Codina.
-* [Stabile Version herunterladen][1] (kompatibel mit NVDA 2022.1 und neuer.
 
 Mit dieser Erweiterung können Sie die Position des System-Cursors in Bezug
 auf den Anfang der aktuellen Zeile ermitteln, während der Eingabe, um Text
@@ -62,5 +61,3 @@ Untermenü Einstellungen, Dialogfeld für die Tastenbefehle ändern:
 * Erste Version
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator

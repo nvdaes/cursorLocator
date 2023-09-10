@@ -1,7 +1,6 @@
 # Cursor Locator #
 
 * Autorzy: Noelia Ruiz Martínez, Sergio Gómez Codina.
-* Pobierz [stabilna wersja][1] (kompatybilna z NVDA 2022.1 i nowszymi)
 
 Ten dodatek umożliwia poznanie położenia karetki systemowej w odniesieniu do
 początku bieżącej linii, podczas pisania w celu dodania tekstu w dokumentach
@@ -63,5 +62,3 @@ Preferencje, oknie dialogowym Gesty wprowadzania:
 * Pierwsza wersja.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator

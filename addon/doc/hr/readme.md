@@ -1,7 +1,6 @@
 # Lokator kursora (Cursor Locator) #
 
 * Autori: Noelia Ruiz Martínez, Sergio Gómez Codina.
-* Preuzmi [stabilnu verziju][1] (kompatibilna s NVDA 2022.1 i novijom)
 
 Ovaj dodatak omogućuje saznati položaj kursora sustava u odnosu na početak
 trenutačnog retka, tijekom tipkanja za dodavanje teksta u dokumente ili
@@ -60,5 +59,3 @@ podizbornik Postavke, dijaloški okvir za ulazne geste:
 * Prva verzija
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator
