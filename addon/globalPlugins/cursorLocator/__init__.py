@@ -198,6 +198,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@script(
 		# Translators: Message presented in input help mode.
 		description=_("Reports the length of the current line."),
+		speakOnDemand=True,
 		gesture="kb:NVDA+control+shift+l"
 	)
 	def script_reportLineLength(self, gesture):
