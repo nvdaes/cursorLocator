@@ -1,6 +1,6 @@
 # Lokator kursora (Cursor Locator) #
 
-* Autori: Noelia Ruiz Martínez, Sergio Gómez Codina.
+* Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
 Ovaj dodatak omogućuje saznati položaj kursora sustava u odnosu na početak
 trenutačnog retka, tijekom tipkanja za dodavanje teksta u dokumente ili

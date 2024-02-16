@@ -44,10 +44,10 @@ Fournit les options suivantes:
 * Test du son pour la fin de ligne: Appuyer sur ce bouton pour tester le son
   configuré pour la fin de ligne.
 
-## Commandes  ##
+## Commandes ##
 
 Vous pouvez modifier les gestes associés aux commandes suivantes via le menu
-NVDA, sous-menu Préférences, boîte de dialogue Gestes de commandes.
+NVDA, sous-menu Préférences, boîte de dialogue Gestes de commandes:
 
 * NVDA+control+shift+l: Si possible, annonce la longueur de la ligne
   actuelle (catégorie Curseur système).

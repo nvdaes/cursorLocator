@@ -1,6 +1,6 @@
 # Cursor ermitteln #
 
-* Autoren: Noelia Ruiz Martínez, Sergio Gómez Codina.
+* Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
 Mit dieser Erweiterung können Sie die Position des System-Cursors in Bezug
 auf den Anfang der aktuellen Zeile ermitteln, während der Eingabe, um Text
