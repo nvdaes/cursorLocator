@@ -1,6 +1,6 @@
 # Kohdistimen paikannin #
 
-* Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
+* Tekijät: Noelia Ruiz Martínez ja Sergio Gómez Codina
 
 Tämän lisäosan avulla on mahdollista selvittää järjestelmäkohdistimen
 sijainti suhteessa nykyisen rivin alkuun lisätessäsi tekstiä asiakirjoihin
