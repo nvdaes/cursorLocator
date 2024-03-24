@@ -1,6 +1,6 @@
 # Cursor Locator #
 
-* 作者： Noelia Ruiz Martínez, Sergio Gómez Codina.
+* Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
 此插件可以在文档或多行控件中输入文本时了解系统输入焦点相对于当前行开头的位置。
 

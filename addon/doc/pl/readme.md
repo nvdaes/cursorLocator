@@ -1,6 +1,6 @@
 # Cursor Locator #
 
-* Autorzy: Noelia Ruiz Martínez, Sergio Gómez Codina.
+* Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
 Ten dodatek umożliwia poznanie położenia karetki systemowej w odniesieniu do
 początku bieżącej linii, podczas pisania w celu dodania tekstu w dokumentach

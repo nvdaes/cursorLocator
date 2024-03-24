@@ -1,6 +1,6 @@
 # Cursor Locator #
 
-* Autores: Noelia Ruiz Martínez, Sergio Gómez Codina.
+* Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
 Este complemento permite coñecer a posición do cursor do sistema con
 respecto ó inicio da liña actual, mentres se escribe para engadir texto a

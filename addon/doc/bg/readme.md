@@ -1,6 +1,6 @@
 # Локатор на курсора (Cursor Locator) #
 
-* Автори: Noelia Ruiz Martínez, Sergio Gómez Codina.
+* Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
 Тази добавка дава възможност да се узнава позицията на системната карета
 спрямо началото на текущия ред, докато пишете, за да добавите текст в
