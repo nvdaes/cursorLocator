@@ -6,11 +6,11 @@
 
 "files": [
   {
-    "source": "*.pot",
-    "translation": "addon/locale/%locale_with_underscore%/LC_MESSAGES/nvda.po"
+    "source": "cursorLocator/*.pot",
+    "translation": "cursorLocator/locale/%language%/LC_MESSAGES/nvda.po"
   },
   {
-    "source": "*.md",
-    "translation": "addon/doc/%two_letters_code%/readme.md"
+    "source": "cursorLocator/*.md",
+    "translation": "cursorLocator/doc/%two_letters_code%/readme.md"
   },
 ]
