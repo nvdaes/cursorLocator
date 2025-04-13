@@ -7,7 +7,7 @@
 "files": [
   {
     "source": "cursorLocator/*.pot",
-    "translation": "cursorLocator/locale/%language%/LC_MESSAGES/nvda.po"
+    "translation": "cursorLocator/locale/%two_letters_code%/LC_MESSAGES/nvda.po"
   },
   {
     "source": "cursorLocator/*.md",
