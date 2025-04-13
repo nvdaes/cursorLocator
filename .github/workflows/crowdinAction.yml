@@ -17,7 +17,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Move addon folder
         run: |
-          mv addon ${{ github.event.repository.name }}
+          mkdir ${{ github.event.repository.name }}
+          mv addon/locale ${{ github.event.repository.name }}
+          mv addon/doc ${{ github.event.repository.name }}
           mv *.pot ${{ github.event.repository.name }}
           mv readme.md ${{ github.event.repository.name }}
 
