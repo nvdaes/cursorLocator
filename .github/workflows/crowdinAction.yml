@@ -29,6 +29,8 @@ jobs:
           sudo apt install translate-toolkit
       - name: Convert markdown to pot
         run: md2po -P ${{ github.event.repository.name }} ${{ github.event.repository.name }}
+      - name: Convert markdown to po
+        run: md2po ${{ github.event.repository.name }} ${{ github.event.repository.name }}
       - name: crowdin action
         uses: crowdin/github-action@v2
         with:
