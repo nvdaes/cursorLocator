@@ -211,6 +211,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			info.expand(textInfos.UNIT_LINE)
 			lineLen = len(self.removeCarriageReturn(info.text))
 			# Translators: message to report line length.
-			ui.message(_("Line length: %d") % lineLen)
+			ui.message(_("Linelength: %d") % lineLen)
 		except Exception:
 			pass
