@@ -27,7 +27,8 @@ jobs:
           sudo apt update
           sudo apt install gettext
           sudo apt install translate-toolkit
-
+      - name: Convert markdown to pot
+        run: md2po -P ${{ github.event.repository.name }}
       - name: crowdin action
         uses: crowdin/github-action@v2
         with:
