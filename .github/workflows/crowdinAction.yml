@@ -28,10 +28,8 @@ jobs:
           sudo apt install gettext
           sudo apt install translate-toolkit
       - name: Convert markdown to pot
-        run: md2po -P ${{ github.event.repository.name }} ${{ github.event.repository.name }}
-      - name: Convert markdown to po
-        run: |
-          for dir in ${{ github.event.repository.name }}/locale do md2po ${{ github.event.repository.name }}/readme.md dir dir/LC_MESSAGES
+        run: md2po -P ${{ github.event.repository.name }}/readme.md ${{ github.event.repository.name }}/readme.pot
+
       - name: crowdin action
         uses: crowdin/github-action@v2
         with:
