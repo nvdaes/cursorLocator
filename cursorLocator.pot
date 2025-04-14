@@ -29,7 +29,7 @@ msgstr ""
 
 #. Translators: Label for the Cursor Locator panel.
 #: addon\globalPlugins\cursorLocator\__init__.py:63
-msgid "Report &line length:"
+msgid "Reporting:"
 msgstr ""
 
 #. Translators: Label for the Cursor Locator panel.
