@@ -22,12 +22,18 @@ jobs:
           mv addon/doc ${{ github.event.repository.name }}
           mv *.pot ${{ github.event.repository.name }}
           mv readme.md ${{ github.event.repository.name }}
+      - name: Install gettext and translate-toolkit
+        run: |
+          sudo apt update
+          sudo apt install gettext
+          sudo apt install translate-toolkit
 
       - name: crowdin action
         uses: crowdin/github-action@v2
         with:
           upload_sources: true
-          upload_translations: false
+          upload_translations: true
+          auto_approve_imported: true
           download_translations: true
           localization_branch_name: l10n_crowdin_translations
           create_pull_request: false
