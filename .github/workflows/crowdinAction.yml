@@ -19,7 +19,6 @@ jobs:
         run: |
           mkdir ${{ github.event.repository.name }}
           mv addon/locale ${{ github.event.repository.name }}
-          mv addon/doc ${{ github.event.repository.name }}
           mv *.pot ${{ github.event.repository.name }}
           mv readme.md ${{ github.event.repository.name }}
       - name: Install gettext and translate-toolkit
@@ -28,7 +27,7 @@ jobs:
           sudo apt install gettext
           sudo apt install translate-toolkit
       - name: Convert markdown to pot
-        run: md2po -P ${{ github.event.repository.name }}/readme.md ${{ github.event.repository.name }}/readme.pot
+        run: md2po -P ${{ github.event.repository.name }} ${{ github.event.repository.name }}
 
       - name: crowdin action
         uses: crowdin/github-action@v2
