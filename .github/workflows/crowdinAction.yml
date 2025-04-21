@@ -15,14 +15,14 @@ jobs:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v4
-      - name: Create pot "file
-        run: scons pot
+
       - name: Install gettext and translate-toolkit
         run: |
           sudo apt update
           sudo apt install gettext
           sudo apt install translate-toolkit
-
+      - name: Create pot "file
+        run: scons pot
       - name: Move addon folder
         run: |
           mkdir ${{ github.event.repository.name }}
