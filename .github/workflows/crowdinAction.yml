@@ -66,6 +66,6 @@ jobs:
           fetch-depth: 0
 
       - name: Convert doc to markdown
-        run: po2md -i ${{ github.event.repository.name }}/doc -t ${{ github.event.repository.name }}/doc -o ${{ github.event.repository.name }}/doc
+        run: po2md -i ${{ github.event.repository.name }}/doc -t ${{ github.event.repository.name }} -o ${{ github.event.repository.name }}/doc
 
 
