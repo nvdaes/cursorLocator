@@ -26,13 +26,15 @@ jobs:
           sudo apt update
           sudo apt install gettext
           sudo apt install translate-toolkit
+      - name: Create add-on
+        run: scons
       - name: Create pot "file
         run: scons pot
       - name: Move addon folder
         run: |
           mkdir ${{ github.event.repository.name }}
-          mkdir ${{ github.event.repository.name }}/doc
           mv addon/locale ${{ github.event.repository.name }}
+          mv addon/doc ${{ github.event.repository.name }}
           mv *.pot ${{ github.event.repository.name }}
           mv readme.md ${{ github.event.repository.name }}
 
