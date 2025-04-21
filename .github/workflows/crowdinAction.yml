@@ -15,9 +15,14 @@ jobs:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v4
+      - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.11
 
-      - name: Install gettext and translate-toolkit
+      - name: Install dependencies
         run: |
+          pip install scons markdown
           sudo apt update
           sudo apt install gettext
           sudo apt install translate-toolkit
