@@ -68,17 +68,30 @@ jobs:
           for dir in ${{ github.event.repository.name }}/doc; do  po2md -i $dir -t ${{ github.event.repository.name }}/readme.md -o $dir/translated; done
       - name: list
         run: ls -R ${{  github.event.repository.name }}
-      - name: Store translated files in doc folder
-        run: |
-          git checkout main
-          for dir in ${{ github.event.repository.name }}/doc/translated; do  mv $dir addon/doc; done
-      - name: List translated files
-        run: |
-          ls -R addon/doc
-      - name: Push translated documentation
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit --m "Update doc"
-          git push origin l10n
+      - name: Upload doc
+        uses: actions/upload-artifact@v4
+        with:
+          name: translatedDoc
+          path: ${{ github.event.repository.name }}/doc/translated
+
+  pullTranslations:
+    needs: synchronize-with-crowdin
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Download
+      uses: actions/download-artifact@v4
+      with:
+        name: translatedDoc
+    - name: Add translated doc
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "Test"
+
+
+
