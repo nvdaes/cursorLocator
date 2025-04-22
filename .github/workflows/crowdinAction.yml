@@ -69,6 +69,6 @@ jobs:
         run: |
           for dir in ${{ github.event.repository.name }}/doc; do  po2md -i $dir -t ${{ github.event.repository.name }}/readme.md -o $dir/translated; done
       - name: list
-        run: ls ${{  github.event.repository.name }}
+        run: ls -R ${{  github.event.repository.name }}
       - name: Git status
         run: git status
