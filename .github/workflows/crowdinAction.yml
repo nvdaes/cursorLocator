@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
@@ -70,14 +72,13 @@ jobs:
         run: ls -R ${{  github.event.repository.name }}
       - name: Store translated files in doc folder
         run: |
+          git checkout main
+          git checkout -b l10n
           for dir in ${{ github.event.repository.name }}/doc/translated; do  mv $dir addon/doc; done
       - name: List translated files
-        run: ls -R addon/doc
-      - name: Push translated documentation
         run: |
-          git config user.name github-actions
+          ls -R addon/doc
           git config user.email github-actions@github.com
-          git add addon/doc
-          git commit -m "Update translated doc"
-          git push origin l10n_crowdin_translations
-          
+          git add .
+          git commit -F ../commitMsg.txt
+          git push
