@@ -70,5 +70,5 @@ jobs:
 
       - name: Convert doc to markdown
         run: |
-          for dir in ${{ github.event.repository.name }}/doc; do po2md -i $dir -t ${{ github.event.repository.name }}/readme.md -o $dir; done
+          for dir in ${{ github.event.repository.name }}/doc; do cat > $dir/readme.md; po2md -i $dir -t ${{ github.event.repository.name }}/readme.md -o $dir; done
 
