@@ -77,5 +77,5 @@ jobs:
           git add ${{ github.event.repository.name }}/doc/translate
           git fetch origin
           git checkout main
-          git reset addon/doc l10n_crowdin_translations ${{ github.event.repository.name }}/doc/translate
+          git reset addon/doc l10n_crowdin_translations ${{ github.event.repository.name }}/doc/translated
           
