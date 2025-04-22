@@ -78,5 +78,6 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add addon/doc
+          git commit -m "Update translated doc"
           git push origin l10n_crowdin_translations
           
