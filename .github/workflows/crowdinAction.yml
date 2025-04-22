@@ -69,7 +69,7 @@ jobs:
         run: |
           git fetch origin
           git merge origin/l10n_crowdin_translations
-          makedir doc
+          mkdir doc
           for dir in ${{ github.event.repository.name }}/doc; do mv $dir addon/doc; done
 
           for dir in addon/doc; do  po2md -i $dir -t ${{ github.event.repository.name }}/readme.md -o doc/readme.md; done
