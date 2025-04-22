@@ -81,3 +81,4 @@ jobs:
           git config user.email github-actions@github.com
           git add addon/doc
           git push
+          
