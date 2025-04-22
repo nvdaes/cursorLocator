@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
@@ -80,5 +78,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add addon/doc
-          git push
+          git push origin l10n_crowdin_translations
           
