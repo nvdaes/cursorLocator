@@ -73,4 +73,6 @@ jobs:
           for dir in ${{ github.event.repository.name }}/doc; do mv $dir addon/doc; done
 
           for dir in addon/doc; do  po2md -i $dir -t ${{ github.event.repository.name }}/readme.md -o doc/readme.md; done
+      - name: Git status
+        run: git status
 
