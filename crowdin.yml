@@ -11,6 +11,6 @@
   },
   {
     "source": "cursorLocator/readme.pot",
-    "translation": "cursorLocator/translateDoc/%two_letters_code%/readme.po"
+    "translation": "cursorLocator/doc/%two_letters_code%/readme.po"
   },
 ]
