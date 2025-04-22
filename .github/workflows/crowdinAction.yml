@@ -75,3 +75,9 @@ jobs:
           for dir in ${{ github.event.repository.name }}/doc/translated; do  mv $dir addon/doc; done
       - name: List translated files
         run: ls -R addon/doc
+      - name: Push translated documentation
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add addon/doc
+          git push
