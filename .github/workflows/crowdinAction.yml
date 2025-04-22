@@ -86,10 +86,12 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: translatedDoc
+        path: addon/doc
     - name: Add translated doc
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
+        git status
         git add .
         git commit -m "Test"
 
