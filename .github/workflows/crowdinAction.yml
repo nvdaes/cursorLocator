@@ -73,3 +73,5 @@ jobs:
       - name: Store translated files in doc folder
         run: |
           for dir in ${{ github.event.repository.name }}/doc/translated; do  mv $dir addon/doc; done
+      - name: List translated files
+        run: ls -R addon/doc
