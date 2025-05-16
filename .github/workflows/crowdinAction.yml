@@ -41,7 +41,7 @@ jobs:
         run: md2po -P ${{ github.event.repository.name }}/readme.md ${{ github.event.repository.name }}
       - name: Move po files in doc
         run: |
-          for pofile in ${{ github.event.repository.name }}/*.po; do mv $pofile sed 's/\(.*\.\)\(.*\.\).*/\1\/readme.po/'; done;
+          for pofile in ${{ github.event.repository.name }}/*.po; do mv $pofile sed 's/\(.*\.\)\(.*\.\).*/\1\/readme.po/' $pofile; done;
 
       - name: list
         run: ls -R ${{  github.event.repository.name }}
