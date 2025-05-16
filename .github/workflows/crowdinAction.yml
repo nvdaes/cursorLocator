@@ -39,9 +39,9 @@ jobs:
 
       - name: Convert markdown to pot
         run: md2po -P ${{ github.event.repository.name }}/readme.md ${{ github.event.repository.name }}
-      - name: Convert doc to po
+      - name: Move po files in doc
         run: |
-          for mdfile in ${{ github.event.repository.name }}/doc/**/readme.md; do md2po $mdfile $mdfile.po; done
+          for pofile in ${{ github.event.repository.name }}/*.po; do mv $pofile sed 's/\(.*\.\)\(.*\.\).*/\1\/readme.po/'; done;
 
       - name: list
         run: ls -R ${{  github.event.repository.name }}

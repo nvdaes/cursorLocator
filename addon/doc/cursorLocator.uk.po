@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2024-02-13 14:37+0000\n"
+"PO-Revision-Date: 2022-11-02 22:35+0200\n"
+"Last-Translator: Ukrainian NVDA Community <vp88.mobile@gmail.com>\n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.2\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!meta title=\"Cursor Locator\"]]\n"
+msgstr "[[!meta title=\"Cursor Locator\"]]\n"
+
+#. type: Bullet: '* '
+#, fuzzy
+#| msgid "Authors: Noelia Ruiz Martínez, Sergio Gómez Codina."
+msgid "Authors: Noelia Ruiz Martínez, Sergio Gómez Codina."
+msgstr "Автори: Noelia Ruiz Martínez, Sergio Gómez Codina."
+
+#. type: Plain text
+msgid ""
+"This add-on makes possible to know the position of the system caret respect "
+"to the start of the current line, while typing to add text in documents or "
+"multiline controls."
+msgstr ""
+"Цей додаток показує позицію системної каретки відносно початку поточного "
+"рядка під час введення тексту для додавання тексту в документах або "
+"багаторядкових елементах керування."
+
+#. type: Plain text
+msgid ""
+"This feature deppends on the visual appearance of applications. Therefore, "
+"you may need to disable line adjustment or configure the add-on for "
+"different programs."
+msgstr ""
+"Ця функція залежить від візуального вигляду програм, Тому в деяких випадках "
+"потрібно вимикати корегування рядків або налаштувати додаток для різних "
+"програм."
+
+#. type: Title ##
+#, no-wrap
+msgid "Cursor Locator settings"
+msgstr "Налаштування Cursor Locator"
+
+#. type: Plain text
+msgid ""
+"This panel is available from NVDA's menu, Preferences submenu, Settings "
+"dialog."
+msgstr ""
+"Ця панель доступна з меню NVDA, підменю «Параметри», діалогу «Налаштування»."
+
+#. type: Plain text
+msgid "It provides the following options:"
+msgstr "Вона надає такі опції:"
+
+#. type: Bullet: '* '
+msgid ""
+"Report line length: You can type or choose a line length (number of "
+"characters between 0 and 600), which will be announced by a hight tone when "
+"it's reached. (The default value is 80 characters)."
+msgstr ""
+"Повідомити про довжину рядка: можна ввести або вибрати довжину рядка "
+"(кількість символів від 0 до 600), яка  озвучуватиметься високим сигналом, "
+"коли її буде досягнуто. (Стандартне значення – 80 символів)."
+
+#. type: Bullet: '* '
+msgid ""
+"Maximum number of beeps for start of line notification: You can type or "
+"select a value between 0 and 600. The default value is 0."
+msgstr ""
+"Максимальна кількість звукових сигналів для сповіщення про початок рядка: "
+"можна ввести або вибрати значення від 0 до 600. Стандартне значення  – 0."
+
+#. type: Bullet: '* '
+msgid ""
+"Maximum number of beeps for end of line notification: You can type or select "
+"a value between 0 and 600. The default value is 0."
+msgstr ""
+"Максимальна кількість звукових сигналів для сповіщення про кінець рядка: "
+"можна ввести або вибрати значення від 0 до 600. Стандартне значення  – 0."
+
+#. type: Bullet: '* '
+msgid ""
+"Pitch of sound for start of line: You can type or select a value between 20 "
+"and 20000. (The default value is 400 hertzs)."
+msgstr ""
+"Висота звуку на початку рядка: Можна ввести або вибрати значення від 20 до "
+"20000. (Стандартне значення - 400 герц)."
+
+#. type: Bullet: '* '
+msgid ""
+"Length of sound for start of line: You can type or select a value between 20 "
+"and 2000. (The default value is 50 milliseconds)."
+msgstr ""
+"Довжина звуку на початку рядка: можна ввести або вибрати значення від 20 до "
+"2000. (Стандартне значення  становить 50 мілісекунд)."
+
+#. type: Bullet: '* '
+msgid ""
+"Test sound for start of line: Press this button to test the configured sound "
+"for start of line."
+msgstr ""
+"Перевірити звук початку рядка: натисніть цю кнопку, щоб перевірити "
+"налаштований звук початку рядка."
+
+#. type: Bullet: '* '
+msgid ""
+"Pitch of sound for end of line: You can type or select a value between 20 "
+"and 20000. (The default value is 1000 hertzs)."
+msgstr ""
+"Висота звуку в кінці рядка: Можна ввести або вибрати значення від 20 до "
+"20000. (Стандартне значення – 1000 герц)."
+
+#. type: Bullet: '* '
+msgid ""
+"Length of sound for end of line: You can type or select a value between 20 "
+"and 2000. (The default value is 50 milliseconds)."
+msgstr ""
+"Довжина звуку в кінці рядка: можна ввести або вибрати значення від 20 до "
+"2000. (Стандартне значення становить 50 мілісекунд)."
+
+#. type: Bullet: '* '
+msgid ""
+"Test sound for end of line: Press this button to test the configured sound "
+"for end of line."
+msgstr ""
+"Перевірити звук в кінці рядка: натисніть цю кнопку, щоб перевірити "
+"налаштований звук кінця рядка."
+
+#. type: Title ##
+#, no-wrap
+msgid "Commands"
+msgstr "Команди"
+
+#. type: Plain text
+msgid ""
+"You can modify the gestures to the following commands trought the NVDA's "
+"menu, Preferences submenu, Input gestures dialog:"
+msgstr ""
+"Ви можете змінити жести для цих команд за допомогою меню NVDA, підменю "
+"«Параметри», діалогу «Жести вводу»:"
+
+#. type: Bullet: '* '
+msgid ""
+"NVDA+control+shift+l: When possible, reports the lenght of the current line "
+"(System caret category)."
+msgstr ""
+"NVDA+control+shift+l: якщо можливо, повідомляє довжину поточного рядка "
+"(категорія «Системна каретка»)."
+
+#. type: Bullet: '* '
+msgid ""
+"Not assigned: Shows the Cursor Locator settings dialog (Config category)."
+msgstr ""
+"Не призначено: показує діалог налаштувань Cursor Locator (категорія "
+"«Конфігурація»)."
+
+#. type: Title ##
+#, fuzzy, no-wrap
+#| msgid "Changes for 2.0"
+msgid "Changes for 3.0"
+msgstr "Зміни в версії 2.0"
+
+#. type: Bullet: '* '
+msgid "Compatible with NVDA 2023.1."
+msgstr ""
+
+#. type: Title ##
+#, no-wrap
+msgid "Changes for 2.0"
+msgstr "Зміни в версії 2.0"
+
+#. type: Bullet: '* '
+msgid ""
+"Added ability to repeat notifications when reaching end and start of line."
+msgstr ""
+"Додано можливість повторювати сповіщення при досягненні кінця та початку "
+"рядка."
+
+#. type: Bullet: '* '
+msgid "Added support for Office documents, and Notepad on Windows 11."
+msgstr "Додано підтримку документів Office і програми Блокнот у Windows 11."
+
+#. type: Title ##
+#, no-wrap
+msgid "Changes for 1.0"
+msgstr "Зміни в версії 1.0"
+
+#. type: Bullet: '* '
+msgid "Initial version"
+msgstr "Початкова версія"
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!tag dev stable]]\n"
+msgstr "[[!tag dev stable]]\n"
+
+#~ msgid ""
+#~ "Download [stable version][1] (compatible with NVDA 2022.1 and beyond)."
+#~ msgstr ""
+#~ "Завантажити [стабільну версію][1] (сумісна з NVDA 2022.1 і пізнішими)."
+
+#, fuzzy
+#~| msgid ""
+#~| "[1]: https://addons.nvda-project.org/files/get.php?file=cursorLocator"
+#~ msgid "[1]: https://www.nvaccess.org/addonStore/legacy?file=cursorLocator"
+#~ msgstr ""
+#~ "[1]: https://addons.nvda-project.org/files/get.php?file=cursorLocator"

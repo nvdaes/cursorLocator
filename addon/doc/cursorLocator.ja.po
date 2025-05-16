@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2024-02-13 14:37+0000\n"
+"PO-Revision-Date: 2022-06-29 21:26+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.1\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!meta title=\"Cursor Locator\"]]\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#, fuzzy
+#| msgid "Authors: Noelia Ruiz Martínez, Sergio Gómez Codina."
+msgid "Authors: Noelia Ruiz Martínez, Sergio Gómez Codina."
+msgstr "作者: Noelia Ruiz Martínez, Sergio Gómez Codina."
+
+#. type: Plain text
+msgid ""
+"This add-on makes possible to know the position of the system caret respect "
+"to the start of the current line, while typing to add text in documents or "
+"multiline controls."
+msgstr ""
+"このアドオンにより、ドキュメントや複数行コントロールに入力して、文字を追加す"
+"る時に、現在の行の先頭からのシステムキャレットの位置を知ることが出来ます。"
+
+#. type: Plain text
+msgid ""
+"This feature deppends on the visual appearance of applications. Therefore, "
+"you may need to disable line adjustment or configure the add-on for "
+"different programs."
+msgstr ""
+"この機能は、アプリケーションの見た目に依存します。よって、他のプログラムのた"
+"めには、行の調整を無効にしたり、このアドオンを設定したりする必要があります。"
+
+#. type: Title ##
+#, no-wrap
+msgid "Cursor Locator settings"
+msgstr "カーソルロケーター設定"
+
+#. type: Plain text
+msgid ""
+"This panel is available from NVDA's menu, Preferences submenu, Settings "
+"dialog."
+msgstr "このパネルは、NVDAメニュー、設定(P)、設定(S)から使用出来ます。"
+
+#. type: Plain text
+msgid "It provides the following options:"
+msgstr "次のようなオプションがあります:"
+
+#. type: Bullet: '* '
+msgid ""
+"Report line length: You can type or choose a line length (number of "
+"characters between 0 and 600), which will be announced by a hight tone when "
+"it's reached. (The default value is 80 characters)."
+msgstr ""
+"行の長さを報告: 行の長さを入力するか、選択できます(0から600の間の文字数)。到"
+"達すると、高さの音で報告されます。（初期値は80文字)"
+
+#. type: Bullet: '* '
+msgid ""
+"Maximum number of beeps for start of line notification: You can type or "
+"select a value between 0 and 600. The default value is 0."
+msgstr ""
+"行の開始を通知するビープの最大値: 0から600の値を入力または選択。初期値は0。"
+
+#. type: Bullet: '* '
+msgid ""
+"Maximum number of beeps for end of line notification: You can type or select "
+"a value between 0 and 600. The default value is 0."
+msgstr ""
+"行の終了を通知するビープの最大値: 0から600の値を入力または選択。初期値は0。"
+
+#. type: Bullet: '* '
+msgid ""
+"Pitch of sound for start of line: You can type or select a value between 20 "
+"and 20000. (The default value is 400 hertzs)."
+msgstr "行の開始の音のピッチ: 20から20000の値を入力または選択(初期値は400Hz)。"
+
+#. type: Bullet: '* '
+msgid ""
+"Length of sound for start of line: You can type or select a value between 20 "
+"and 2000. (The default value is 50 milliseconds)."
+msgstr ""
+"行の開始の音の長さ: 20から2000の値を入力または選択（初期値は50ミリ秒）。"
+
+#. type: Bullet: '* '
+msgid ""
+"Test sound for start of line: Press this button to test the configured sound "
+"for start of line."
+msgstr "行の開始の音のテスト: このボタンを押して行の開始に設定した音をテスト。"
+
+#. type: Bullet: '* '
+msgid ""
+"Pitch of sound for end of line: You can type or select a value between 20 "
+"and 20000. (The default value is 1000 hertzs)."
+msgstr ""
+"行の終了の音のピッチ: 20から20000の値を入力または選択（初期値は1000Hz）。"
+
+#. type: Bullet: '* '
+msgid ""
+"Length of sound for end of line: You can type or select a value between 20 "
+"and 2000. (The default value is 50 milliseconds)."
+msgstr ""
+"行の終了の音の長さ: 20から2000の値を入力または選択（初期値は50ミリ秒）。"
+
+#. type: Bullet: '* '
+msgid ""
+"Test sound for end of line: Press this button to test the configured sound "
+"for end of line."
+msgstr "行の終了の音のテスト: このボタンを押して行の終了に設定した音をテスト。"
+
+#. type: Title ##
+#, no-wrap
+msgid "Commands"
+msgstr "コマンド"
+
+#. type: Plain text
+msgid ""
+"You can modify the gestures to the following commands trought the NVDA's "
+"menu, Preferences submenu, Input gestures dialog:"
+msgstr ""
+"以下のコマンドのジェスチャーは、NVDAメニュー、設定(P)、入力ジェスチャーダイア"
+"ログで変更出来ます。"
+
+#. type: Bullet: '* '
+msgid ""
+"NVDA+control+shift+l: When possible, reports the lenght of the current line "
+"(System caret category)."
+msgstr ""
+"NVDA+control+shift+l: 可能な場合、現在の行の長さを通知します（システムキャ"
+"レットカテゴリ）。"
+
+#. type: Bullet: '* '
+msgid ""
+"Not assigned: Shows the Cursor Locator settings dialog (Config category)."
+msgstr ""
+"割り当てなし: カーソルロケーター設定ダイアログを表示（コンフィグカテゴリ）"
+
+#. type: Title ##
+#, fuzzy, no-wrap
+#| msgid "Changes for 2.0"
+msgid "Changes for 3.0"
+msgstr "2.0での変更点"
+
+#. type: Bullet: '* '
+msgid "Compatible with NVDA 2023.1."
+msgstr ""
+
+#. type: Title ##
+#, no-wrap
+msgid "Changes for 2.0"
+msgstr "2.0での変更点"
+
+#. type: Bullet: '* '
+msgid ""
+"Added ability to repeat notifications when reaching end and start of line."
+msgstr "行の終了と開始に着いたら通知を繰り返せるようにしました。"
+
+#. type: Bullet: '* '
+msgid "Added support for Office documents, and Notepad on Windows 11."
+msgstr "オフィスドキュメントと、Windows 11のメモ帳のサポートを追加しました。"
+
+#. type: Title ##
+#, no-wrap
+msgid "Changes for 1.0"
+msgstr "1.0の変更"
+
+#. type: Bullet: '* '
+msgid "Initial version"
+msgstr "最初のバージョン"
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!tag dev stable]]\n"
+msgstr ""
+
+#~ msgid ""
+#~ "Download [stable version][1] (compatible with NVDA 2022.1 and beyond)."
+#~ msgstr "ダウンロード [安定版][1] (NVDA 2022.1以降に互換)."
