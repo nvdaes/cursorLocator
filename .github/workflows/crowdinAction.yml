@@ -41,7 +41,7 @@ jobs:
         run: md2po -P ${{ github.event.repository.name }}/readme.md ${{ github.event.repository.name }}
       - name: Convert doc to po
         run: |
-          for mdfile in ${{ github.event.repository.name }}/doc/**/readme.md; do md2po $mdfile sed 's/$mdfile/.md/.po/; done
+          for mdfile in ${{ github.event.repository.name }}/doc/**/readme.md; do md2po $mdfile $mdfile.po; done
 
       - name: list
         run: ls -R ${{  github.event.repository.name }}
