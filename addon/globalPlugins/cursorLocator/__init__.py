@@ -41,7 +41,6 @@ confspec = {
 
 
 class AddonSettingsPanel(SettingsPanel):
-
 	title = ADDON_PANEL_TITLE
 
 	# Translators: Description of the Cursor Locator panel.
@@ -54,45 +53,62 @@ class AddonSettingsPanel(SettingsPanel):
 		# Translators: Label for a group of Cursor Locator options.
 		lineGroupText = _("Line properties")
 		lineGroup = guiHelper.BoxSizerHelper(
-			self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=lineGroupText), wx.VERTICAL)
+			self,
+			sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=lineGroupText), wx.VERTICAL),
 		)
 		sHelper.addItem(lineGroup)
 
 		self.LengthEdit = lineGroup.addLabeledControl(
 			# Translators: Label for the Cursor Locator panel.
-			_("Report &line length:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=0, max=600, initial=config.conf["cursorLocator"]["reportLineLength"]
+			_("Report &line length:"),
+			nvdaControls.SelectOnFocusSpinCtrl,
+			min=0,
+			max=600,
+			initial=config.conf["cursorLocator"]["reportLineLength"],
 		)
 
 		self.maxRepeatStartEdit = lineGroup.addLabeledControl(
 			# Translators: Label for the Cursor Locator panel.
-			_("Ma&ximum number of beeps for start of line notification:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=0, max=600, initial=config.conf["cursorLocator"]["maxStartNotificationNumber"]
+			_("Ma&ximum number of beeps for start of line notification:"),
+			nvdaControls.SelectOnFocusSpinCtrl,
+			min=0,
+			max=600,
+			initial=config.conf["cursorLocator"]["maxStartNotificationNumber"],
 		)
 
 		self.maxRepeatEndEdit = lineGroup.addLabeledControl(
 			# Translators: Label for the Cursor Locator panel.
-			_("Max&imum number of beeps for end of line notification:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=0, max=600, initial=config.conf["cursorLocator"]["maxEndNotificationNumber"]
+			_("Max&imum number of beeps for end of line notification:"),
+			nvdaControls.SelectOnFocusSpinCtrl,
+			min=0,
+			max=600,
+			initial=config.conf["cursorLocator"]["maxEndNotificationNumber"],
 		)
 
 		# Translators: Label for a group of Cursor Locator options.
 		startGroupText = _("Sound for start of line")
 		startGroup = guiHelper.BoxSizerHelper(
-			self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=startGroupText), wx.VERTICAL)
+			self,
+			sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=startGroupText), wx.VERTICAL),
 		)
 		sHelper.addItem(startGroup)
 
 		self.startHzEdit = startGroup.addLabeledControl(
 			# Translators: Label for the Cursor Locator panel.
-			_("&Pitch of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=20000, initial=config.conf["cursorLocator"]["startLinePitch"]
+			_("&Pitch of sound for start of line:"),
+			nvdaControls.SelectOnFocusSpinCtrl,
+			min=20,
+			max=20000,
+			initial=config.conf["cursorLocator"]["startLinePitch"],
 		)
 
 		self.startLengthEdit = startGroup.addLabeledControl(
 			# Translators: Label for the Cursor Locator panel.
-			_("L&ength of sound for start of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=2000, initial=config.conf["cursorLocator"]["startLineLength"]
+			_("L&ength of sound for start of line:"),
+			nvdaControls.SelectOnFocusSpinCtrl,
+			min=20,
+			max=2000,
+			initial=config.conf["cursorLocator"]["startLineLength"],
 		)
 
 		# Translators: Label for the Cursor Locator panel.
@@ -103,20 +119,27 @@ class AddonSettingsPanel(SettingsPanel):
 		# Translators: Label for a group of Cursor Locator options.
 		endGroupText = _("Sound for end of line")
 		endGroup = guiHelper.BoxSizerHelper(
-			self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=endGroupText), wx.VERTICAL)
+			self,
+			sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=endGroupText), wx.VERTICAL),
 		)
 		sHelper.addItem(endGroup)
 
 		self.endHzEdit = endGroup.addLabeledControl(
 			# Translators: Label for the Cursor Locator panel.
-			_("P&itch of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=20000, initial=config.conf["cursorLocator"]["endLinePitch"]
+			_("P&itch of sound for end of line:"),
+			nvdaControls.SelectOnFocusSpinCtrl,
+			min=20,
+			max=20000,
+			initial=config.conf["cursorLocator"]["endLinePitch"],
 		)
 
 		self.endLengthEdit = endGroup.addLabeledControl(
 			# Translators: Label for the Cursor Locator panel.
-			_("Le&ngth of sound for end of line:"), nvdaControls.SelectOnFocusSpinCtrl,
-			min=20, max=2000, initial=config.conf["cursorLocator"]["endLineLength"]
+			_("Le&ngth of sound for end of line:"),
+			nvdaControls.SelectOnFocusSpinCtrl,
+			min=20,
+			max=2000,
+			initial=config.conf["cursorLocator"]["endLineLength"],
 		)
 
 		# Translators: Label for the Cursor Locator panel.
@@ -141,7 +164,6 @@ class AddonSettingsPanel(SettingsPanel):
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-
 	scriptCategory = SCRCAT_SYSTEMCARET
 
 	def __init__(self):
@@ -158,7 +180,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@script(
 		# Translators: Message presented in input mode.
 		description=_("Shows the {} settings.").format(ADDON_SUMMARY),
-		category=SCRCAT_CONFIG
+		category=SCRCAT_CONFIG,
 	)
 	def script_settings(self, gesture):
 		wx.CallAfter(self.onSettings, None)
@@ -199,7 +221,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Message presented in input help mode.
 		description=_("Reports the length of the current line."),
 		speakOnDemand=True,
-		gesture="kb:NVDA+control+shift+l"
+		gesture="kb:NVDA+control+shift+l",
 	)
 	def script_reportLineLength(self, gesture):
 		obj = api.getFocusObject()

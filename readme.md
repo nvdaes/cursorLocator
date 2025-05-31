@@ -37,5 +37,3 @@ You can modify the gestures to the following commands trought the NVDA's menu, P
 
 ## Changes for 1.0 ##
 * Initial version
-
-

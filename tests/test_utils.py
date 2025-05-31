@@ -15,21 +15,21 @@ PLUGIN_DIR = os.path.join(SOURCE_DIR, "addon", "globalPlugins", "cursorLocator")
 
 config = MagicMock
 config.conf = dict()
-sys.modules['config'] = config
+sys.modules["config"] = config
 sys.path.append(PLUGIN_DIR)
 import utils  # NOQA: E402
+
 del sys.path[-1]
 
 confspec = {
 	"reportLineLength": 0,
 	"maxStartNotificationNumber": 0,
-	"maxEndNotificationNumber": 0
+	"maxEndNotificationNumber": 0,
 }
 config.conf["cursorLocator"] = confspec
 
 
 class TestUtilsConfigFunctions(TestCase):
-
 	def test_getReportLineLength(self):
 		reportLineLength = config.conf["cursorLocator"]["reportLineLength"]
 		self.assertEqual(utils.getReportLineLength(), reportLineLength, f"should be {reportLineLength}")
@@ -37,20 +37,21 @@ class TestUtilsConfigFunctions(TestCase):
 	def test_getMaxStartNotificationNumber(self):
 		maxStartNotificationNumber = config.conf["cursorLocator"]["maxStartNotificationNumber"]
 		self.assertEqual(
-			utils.getMaxStartNotificationNumber(), maxStartNotificationNumber,
-			f"shold be {maxStartNotificationNumber}"
+			utils.getMaxStartNotificationNumber(),
+			maxStartNotificationNumber,
+			f"shold be {maxStartNotificationNumber}",
 		)
 
 	def test_getMaxEndNotificationNumber(self):
 		maxEndNotificationNumber = config.conf["cursorLocator"]["maxEndNotificationNumber"]
 		self.assertEqual(
-			utils.getMaxEndNotificationNumber(), maxEndNotificationNumber,
-			f"shold be {maxEndNotificationNumber}"
+			utils.getMaxEndNotificationNumber(),
+			maxEndNotificationNumber,
+			f"shold be {maxEndNotificationNumber}",
 		)
 
 
 class TestUtilsReportStart(TestCase):
-
 	def setUp(self):
 		self.text = "H"
 		self.reportLineLength = 1
@@ -87,7 +88,6 @@ class TestUtilsReportStart(TestCase):
 
 
 class TestUtilsReportEnd(TestCase):
-
 	def setUp(self):
 		self.text = "Hello"
 		config.conf["cursorLocator"]["reportLineLength"] = 5

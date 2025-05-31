@@ -8,10 +8,9 @@ on:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 0 * * 6'
   workflow_dispatch:
-  
+
 jobs:
   pre-release:
     uses: nvdaes/nvdaAddonWorkflows/.github/workflows/automaticRelease.yaml@main
     permissions:
       contents: write
-    

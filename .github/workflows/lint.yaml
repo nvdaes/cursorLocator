@@ -12,4 +12,3 @@ jobs:
 
   lint:
     uses: nvdaes/nvdaAddonWorkflows/.github/workflows/lint.yaml@main
-    
