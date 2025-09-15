@@ -1,5 +1,4 @@
 # Cursor Locator #
-
 * Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
 This add-on makes possible to know the position of the system caret respect to the start of the current line, while typing to add text in documents or multiline controls.
@@ -30,14 +29,11 @@ You can modify the gestures to the following commands trought the NVDA's menu, P
 * Not assigned: Shows the Cursor Locator settings dialog (Config category).
 
 ## Changes for 3.0 ##
-
 * Compatible with NVDA 2023.1.
 
 ## Changes for 2.0 ##
-
 * Added ability to repeat notifications when reaching end and start of line.
 * Added support for Office documents, and Notepad on Windows 11.
 
 ## Changes for 1.0 ##
-
 * Initial version
