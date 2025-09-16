@@ -48,14 +48,20 @@ podizbornik Postavke, dijaloški okvir za ulazne geste:
   (kategorija konfiguracije).
 
 ## Promjene u verziji 3.0 ##
+
+
 * Kompatibilno s NVDA čitačem 2023.1.
 
+
 ## Promjene u verziji 2.0 ##
+
 * Dodana je mogućnost ponavljanja obavijesti kad se dosegne kraja i početka
   retka.
 * Dodana je podrška za Office dokumente i Notepad na sustavu Windows 11.
 
+
 ## Promjene u verziji 1.0 ##
+
 * Prva verzija
 
 [[!tag dev stable]]
