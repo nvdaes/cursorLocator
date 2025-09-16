@@ -1,4 +1,4 @@
-# Cursor ermitteln
+# Cursor ermitteln #
 
 * Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
@@ -10,7 +10,7 @@ Diese Funktion wirkt sich auf das Erscheinungsbild von Anwendungen
 aus. Daher müssen Sie möglicherweise die Zeilenanpassung deaktivieren oder
 die Erweiterung für verschiedene Programme konfigurieren.
 
-## Einstellungen für die Cursor-Ermittlung
+## Einstellungen für die Cursor-Ermittlung ##
 
 Dieses Panel ist über das NVDA-Menü in den Einstellungen verfügbar.
 
@@ -38,7 +38,7 @@ Es gibt die folgenden Optionen:
 * Testton für Zeilenende: Drücken Sie diese Taste, um den konfigurierten Ton
   für das Ende der Zeile zu testen.
 
-## Befehle
+## Befehle ##
 
 Sie können den Tastenbefehl mit den folgenden Befehlen über das NVDA-Menü,
 Untermenü Einstellungen, Dialogfeld für die Tastenbefehle ändern:
@@ -48,4 +48,16 @@ Untermenü Einstellungen, Dialogfeld für die Tastenbefehle ändern:
 * Nicht zugewiesen: Zeigt den Einstellungsdialog für den Cursor Locator an
   (Konfigurationskategorie).
 
-## Änderungen für 3.0
+## Änderungen für 3.0 ##
+* Kompatibel mit NVDA 2023.1.
+
+## Änderungen in 2.0 ##
+* Es besteht die Möglichkeit, Benachrichtigungen zu wiederholen, wenn das
+  Ende oder der Anfang einer Zeile erreicht wird.
+* Unterstützung für Office-Dokumente und Notepad unter Windows 11
+  hinzugefügt.
+
+## Änderungen in 1.0 ##
+* Erste Version
+
+[[!tag dev stable]]

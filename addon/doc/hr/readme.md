@@ -1,4 +1,4 @@
-# Lokator kursora (Cursor Locator)
+# Lokator kursora (Cursor Locator) #
 
 * Autori: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
@@ -10,7 +10,7 @@ Ova značajka ovisi o vizualnom izgledu aplikacija. Stoga će možda biti
 potrebno deaktivirati prilagođavanje redaka ili konfigurirati dodatak za
 drugačije programe.
 
-## Lokator kursora – postavke
+## Lokator kursora – postavke ##
 
 Ova ploča dostupna je putem NVDA izbornika, podizbornik Postavke, dijaloški
 okvir Postavke.
@@ -37,7 +37,7 @@ Pruža sljedeće opcije:
 * Testiranje zvuka za kraj retka: pritisni ovaj gumb za testiranje
   konfiguriranog zvuka za kraj retka.
 
-## Naredbe
+## Naredbe ##
 
 Geste se mogu promijeniti u sljedeće naredbe putem NVDA izbornika,
 podizbornik Postavke, dijaloški okvir za ulazne geste:
@@ -47,6 +47,15 @@ podizbornik Postavke, dijaloški okvir za ulazne geste:
 * Nije dodijeljeno: Prikazuje dijaloški okvir postavki za „Lokator kursora”
   (kategorija konfiguracije).
 
-## Promjene u verziji 3.0
+## Promjene u verziji 3.0 ##
+* Kompatibilno s NVDA čitačem 2023.1.
 
+## Promjene u verziji 2.0 ##
+* Dodana je mogućnost ponavljanja obavijesti kad se dosegne kraja i početka
+  retka.
+* Dodana je podrška za Office dokumente i Notepad na sustavu Windows 11.
+
+## Promjene u verziji 1.0 ##
 * Prva verzija
+
+[[!tag dev stable]]

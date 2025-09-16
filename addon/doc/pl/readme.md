@@ -1,4 +1,4 @@
-# Cursor Locator
+# Cursor Locator #
 
 * Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
@@ -10,7 +10,7 @@ Ta funkcja wpływa na wygląd aplikacji. W związku z tym może być konieczne
 wyłączenie dostosowania linii lub skonfigurowanie dodatku dla różnych
 programów.
 
-## Ustawienia lokalizatora kursorów
+## Ustawienia lokalizatora kursorów ##
 
 Ten panel jest dostępny z menu NVDA, podmenu Preferencje, okna dialogowego
 Ustawienia.
@@ -39,7 +39,7 @@ Udostępnia następujące opcje:
 * Przetestuj dźwięk dla końca linii: Naciśnij ten przycisk, aby przetestować
   skonfigurowany dźwięk dla końca linii.
 
-## Polecenia
+## Polecenia ##
 
 Możesz modyfikować gesty do następujących poleceń w menu NVDA, podmenu
 Preferencje, oknie dialogowym Gesty wprowadzania:
@@ -49,4 +49,16 @@ Preferencje, oknie dialogowym Gesty wprowadzania:
 * Nieprzypisane: Wyświetla okno dialogowe Ustawień lokalizatora kursorów
   (kategoria Konfiguracja).
 
-## Zmiany w wersji 3.0
+## Zmiany w wersji 3.0 ##
+* Kompatybilny z NVDA 2023.1.
+
+## Zmiany w wersji 2.0 ##
+* Dodano możliwość powtarzania powiadomień po dotarciu do końca i początku
+  linii.
+* Dodano obsługę dokumentów pakietu Office i Notatnika w systemie Windows
+  11.
+
+## Zmiany dla 1.0 ##
+* Pierwsza wersja.
+
+[[!tag dev stable]]

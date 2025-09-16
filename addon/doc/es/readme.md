@@ -1,4 +1,4 @@
-# Cursor Locator
+# Cursor Locator #
 
 * Autores: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
@@ -10,7 +10,7 @@ Esta función depende del aspecto visual de las aplicaciones. Por lo tanto,
 puede que haga falta que desactives el ajuste de línea o configurar el
 complemento para diferentes programas.
 
-## Opciones de Cursor Locator
+## Opciones de Cursor Locator ##
 
 Este panel se encuentra disponible desde el menú NVDA, submenú Preferencias,
 diálogo de Opciones.
@@ -39,7 +39,7 @@ Proporciona las siguientes opciones:
 * Probar sonido de fin de línea: pulsa este botón para probar el sonido de
   fin de línea.
 
-## Órdenes
+## Órdenes ##
 
 Puedes modificar los gestos asociados a las siguientes órdenes mediante el
 menú NVDA, submenú Preferencias, diálogo Gestos de entrada:
@@ -49,4 +49,16 @@ menú NVDA, submenú Preferencias, diálogo Gestos de entrada:
 * Sin asignar: muestra el diálogo de opciones de Cursor Locator (categoría
   Configuración).
 
-## Cambios para 3.0
+## Cambios para 3.0 ##
+* Compatible con NVDA 2023.1.
+
+## Cambios para 2.0 ##
+* Añadida la posibilidad de repetir notificaciones al llegar al principio o
+  final de la línea.
+* Añadido soporte para documentos de Office y el bloc de notas de Windows
+  11.
+
+## Cambios para 1.0 ##
+* Versión inicial
+
+[[!tag dev stable]]
