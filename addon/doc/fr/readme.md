@@ -55,5 +55,15 @@ NVDA, sous-menu Préférences, boîte de dialogue Gestes de commandes:
   ((catégorie Configuration).
 
 ## Changements pour la version 3.0 ##
+* Compatible avec NVDA 2023.1.
 
 ## Changements pour la version 2.0 ##
+* Ajoutée la possibilité de répéter les notifications lorsqu'il  est atteint
+  la fin et le début de ligne.
+* Ajout de la prise en charge des documents Office et du Bloc-notes
+  (Notepad) sous Windows 11.
+
+## Changements pour la version 1.0 ##
+* Première version
+
+[[!tag dev stable]]

@@ -49,5 +49,15 @@ Untermenü Einstellungen, Dialogfeld für die Tastenbefehle ändern:
   (Konfigurationskategorie).
 
 ## Änderungen für 3.0 ##
+* Kompatibel mit NVDA 2023.1.
 
+## Änderungen in 2.0 ##
+* Es besteht die Möglichkeit, Benachrichtigungen zu wiederholen, wenn das
+  Ende oder der Anfang einer Zeile erreicht wird.
+* Unterstützung für Office-Dokumente und Notepad unter Windows 11
+  hinzugefügt.
+
+## Änderungen in 1.0 ##
 * Erste Version
+
+[[!tag dev stable]]
