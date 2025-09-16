@@ -48,14 +48,23 @@ NVDA; submenú Preferencias, diálogo Xestos de entrada:
   Configuración).
 
 ## Cambios para 3.0 ##
+
+
+
 * Compatible con NVDA 2023.1.
 
+
+
 ## Cambios para 2.0 ##
+
 * Engadida a posibilidade de repetir notificacións ao acadar o final e o
+
   inicio de liña.
 * Engadido soporte para documentos de Office, e Bloc de notas en windows 11.
 
+
 ## Cambios para 1.0 ##
+
 * Versión inicial
 
 [[!tag dev stable]]

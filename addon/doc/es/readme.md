@@ -50,15 +50,24 @@ menú NVDA, submenú Preferencias, diálogo Gestos de entrada:
   Configuración).
 
 ## Cambios para 3.0 ##
+
+
+
 * Compatible con NVDA 2023.1.
 
+
+
 ## Cambios para 2.0 ##
+
 * Añadida la posibilidad de repetir notificaciones al llegar al principio o
   final de la línea.
+
 * Añadido soporte para documentos de Office y el bloc de notas de Windows
   11.
 
+
 ## Cambios para 1.0 ##
+
 * Versión inicial
 
 [[!tag dev stable]]

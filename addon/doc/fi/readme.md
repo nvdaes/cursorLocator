@@ -48,13 +48,22 @@ Asetukset-alivalikko -> Näppäinkomennot-valintaikkuna:
   (Asetukset-kategoria).
 
 ## Muutokset versiossa 3.0 ##
+
+
+
 * Yhteensopiva NVDA 2023.1:n kanssa.
 
+
+
 ## Muutokset versiossa 2.0 ##
+
+
 * Lisätty mahdollisuus ilmoitusten toistamiseen rivin lopussa ja alussa.
 * Lisätty tuki Office-asiakirjoille ja Windows 11:n Muistiolle.
 
+
 ## Muutokset versiossa 1.0 ##
+
 * Ensimmäinen versio
 
 [[!tag dev stable]]
