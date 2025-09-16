@@ -49,14 +49,5 @@ NVDA, submenu Preferências, caixa de diálogo Gestos de entrada:
   Locator (categoria Config).
 
 ## Alterações para a versão 3.0 ##
-* Compatível com o NVDA 2023.1.
 
-## Alterações para a versão 2.0 ##
-* Foi adicionada a capacidade de repetir notificações ao chegar ao final e
   ao início da linha.
-* Adicionado suporte para documentos do Office e Notepad no Windows 11.
-
-## Alterações para a versão 1.0 ##
-* Versão inicial
-
-[[!tag dev stable]]
