@@ -1,4 +1,4 @@
-# Cursor Locator #
+# Cursor Locator
 
 * Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 

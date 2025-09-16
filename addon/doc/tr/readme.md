@@ -1,4 +1,4 @@
-# İmleç Konumlandırıcı #
+# İmleç Konumlandırıcı
 
 * Yazarlar: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
@@ -10,7 +10,7 @@ Bu özellik, uygulamaların görsel görünümüne bağlıdır. Bu nedenle, sat�
 ayarını devre dışı bırakmanız veya eklentiyi farklı programlar için
 yapılandırmanız gerekebilir.
 
-## İmleç Konumlandırıcı ayarları ##
+## İmleç Konumlandırıcı ayarları
 
 Bu panele NVDA menüsü, Tercihler alt menüsü, Ayarlar iletişim kutusundan
 erişilebilir.
@@ -37,7 +37,7 @@ Aşağıdaki seçenekleri sağlar:
 * Satır sonu için sesi test et: Satır sonu için yapılandırılmış sesi test
   etmek için bu düğmeye basın.
 
-## Komutlar ##
+## Komutlar
 
 NVDA menüsü, Tercihler alt menüsü, Girdi hareketleri iletişim kutusu
 aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
@@ -47,6 +47,6 @@ aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
 * Atanmamış: İmleç konumlandırıcı ayarları iletişim kutusunu gösterir
   (Yapılandırma kategorisi).
 
-## 3.0 için değişiklikler ##
+## 3.0 için değişiklikler
 
 * İlk sürüm

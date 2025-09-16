@@ -1,4 +1,4 @@
-# Cursor Locator #
+# Cursor Locator
 
 * Auteurs: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
@@ -10,7 +10,7 @@ Cette fonctionnalité dépend de l'apparence visuelle des applications. Par
 conséquent, vous devrez peut-être désactiver l'ajustement de ligne ou
 configurer l'extension pour différents programmes.
 
-## Paramètres Cursor Locator ##
+## Paramètres Cursor Locator
 
 Ce panneau est disponible dans le menu NVDA, sous-menu Préférences, boîte de
 dialogue Paramètres.
@@ -44,7 +44,7 @@ Fournit les options suivantes:
 * Test du son pour la fin de ligne: Appuyer sur ce bouton pour tester le son
   configuré pour la fin de ligne.
 
-## Commandes ##
+## Commandes
 
 Vous pouvez modifier les gestes associés aux commandes suivantes via le menu
 NVDA, sous-menu Préférences, boîte de dialogue Gestes de commandes:
@@ -54,7 +54,4 @@ NVDA, sous-menu Préférences, boîte de dialogue Gestes de commandes:
 * Non assigné: Affiche la boîte de dialogue Paramètres Cursor Locator
   ((catégorie Configuration).
 
-## Changements pour la version 3.0 ##
-
-
-* Première version
+## Changements pour la version 3.0

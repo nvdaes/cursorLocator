@@ -1,4 +1,4 @@
-# Cursor Locator #
+# Cursor Locator
 
 * Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
@@ -10,7 +10,7 @@ Esta característica depende da aparencia das aplicacións. en consecuencia,
 poderías ter que desactivar o axuste de liña ou configurar o complemento
 para diferentes programas.
 
-## Opcións de Cursor Locator ##
+## Opcións de Cursor Locator
 
 Este panel está dispoñible dende o menú de NVDA, submenú Preferencias,
 diálogo Opcións.
@@ -37,7 +37,7 @@ Proporciona as seguintes opcións:
 * Probar son para final de liña: Preme este botón para probar o son
   configurado para inicio de liña.
 
-## Ordes ##
+## Ordes
 
 Podes modificar os xestos para calquera de estas ordes mediante o menú de
 NVDA; submenú Preferencias, diálogo Xestos de entrada:
@@ -47,6 +47,6 @@ NVDA; submenú Preferencias, diálogo Xestos de entrada:
 * Sen asignar: Amosa o diálogo de configuración de Cursor Locator (categoría
   Configuración).
 
-## Cambios para 3.0 ##
+## Cambios para 3.0
 
 * Versión inicial
