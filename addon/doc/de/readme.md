@@ -51,8 +51,7 @@ Untermenü Einstellungen, Dialogfeld für die Tastenbefehle ändern:
 ## Änderungen für 3.0 ##
 
 
-* Unterstützung für Office-Dokumente und Notepad unter Windows 11
+
 ## Änderungen in 1.0 ##
 
 * Erste Version
-

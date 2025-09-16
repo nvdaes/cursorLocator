@@ -59,10 +59,6 @@ NVDA, sous-menu Préférences, boîte de dialogue Gestes de commandes:
 ## Changements pour la version 2.0 ##
 
 
-* Ajout de la prise en charge des documents Office et du Bloc-notes
-  (Notepad) sous Windows 11.
-
 ## Changements pour la version 1.0 ##
 
 * Première version
-

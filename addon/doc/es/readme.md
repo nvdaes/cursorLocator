@@ -52,8 +52,7 @@ menú NVDA, submenú Preferencias, diálogo Gestos de entrada:
 ## Cambios para 3.0 ##
 
 
-* Añadido soporte para documentos de Office y el bloc de notas de Windows
+
 ## Cambios para 1.0 ##
 
 * Versión inicial
-

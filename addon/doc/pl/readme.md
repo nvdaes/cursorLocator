@@ -54,10 +54,6 @@ Preferencje, oknie dialogowym Gesty wprowadzania:
 ## Zmiany w wersji 2.0 ##
 
 
-* Dodano obsługę dokumentów pakietu Office i Notatnika w systemie Windows
-  11.
-
 ## Zmiany dla 1.0 ##
 
 * Pierwsza wersja.
-

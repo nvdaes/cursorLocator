@@ -52,9 +52,11 @@ podizbornik Postavke, dijaloški okvir za ulazne geste:
 ## Promjene u verziji 2.0 ##
 
   retka.
+
+
+
 * Dodana je podrška za Office dokumente i Notepad na sustavu Windows 11.
 
 ## Promjene u verziji 1.0 ##
 
 * Prva verzija
-

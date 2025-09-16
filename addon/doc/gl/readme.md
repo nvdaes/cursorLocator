@@ -52,9 +52,11 @@ NVDA; submenú Preferencias, diálogo Xestos de entrada:
 ## Cambios para 2.0 ##
 
   inicio de liña.
+
+
+
 * Engadido soporte para documentos de Office, e Bloc de notas en windows 11.
 
 ## Cambios para 1.0 ##
 
 * Versión inicial
-
