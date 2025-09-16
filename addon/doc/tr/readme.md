@@ -51,5 +51,3 @@ aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
 
   eklendi.
 
-
-* İlk sürüm

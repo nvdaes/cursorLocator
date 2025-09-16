@@ -53,5 +53,3 @@ Preferencje, oknie dialogowym Gesty wprowadzania:
 
 ## Zmiany w wersji 2.0 ##
 
-
-* Pierwsza wersja.

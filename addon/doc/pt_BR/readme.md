@@ -51,4 +51,3 @@ NVDA, submenu Preferências, caixa de diálogo Gestos de entrada:
 ## Alterações para a versão 3.0 ##
 
   ao início da linha.
-
