@@ -94,3 +94,9 @@ repos:
     # use nodejs version of pyright and install pyproject.toml for CI
     additional_dependencies: [".", "pyright[nodejs]"]
     stages: [manual]  # Only run from CI manually
+- repo: https://github.com/DavidAnson/markdownlint-cli2
+  rev: v0.18.1
+  hooks:
+  - id: markdownlint-cli2
+    name: Lint markdown files
+    args: ["--fix"]
