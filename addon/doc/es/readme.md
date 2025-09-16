@@ -51,8 +51,4 @@ menú NVDA, submenú Preferencias, diálogo Gestos de entrada:
 
 ## Cambios para 3.0 ##
 
-
-
-## Cambios para 1.0 ##
-
 * Versión inicial

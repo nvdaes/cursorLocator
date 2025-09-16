@@ -52,6 +52,4 @@ aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
   eklendi.
 
 
-* Windows 11'de Office belgeleri ve Not Defteri için destek eklendi.
-
 * İlk sürüm

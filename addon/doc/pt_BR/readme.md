@@ -52,9 +52,3 @@ NVDA, submenu Preferências, caixa de diálogo Gestos de entrada:
 
   ao início da linha.
 
-
-
-
-* Adicionado suporte para documentos do Office e Notepad no Windows 11.
-
-* Versão inicial

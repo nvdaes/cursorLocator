@@ -51,8 +51,4 @@ Asetukset-alivalikko -> Näppäinkomennot-valintaikkuna:
 
 ## Muutokset versiossa 2.0 ##
 
-
-
-* Ensimmäinen versio
-
 [[!tag dev stable]]

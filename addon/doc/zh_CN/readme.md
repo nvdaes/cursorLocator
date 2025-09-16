@@ -30,7 +30,3 @@
 * 未分配：显示 Cursor Locator 设置对话框（配置）。
 
 ## 3.0 的变化 ##
-
-
-
-[[!tag dev stable]]

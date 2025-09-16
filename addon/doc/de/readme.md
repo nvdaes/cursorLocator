@@ -50,8 +50,4 @@ Untermenü Einstellungen, Dialogfeld für die Tastenbefehle ändern:
 
 ## Änderungen für 3.0 ##
 
-
-
-## Änderungen in 1.0 ##
-
 * Erste Version
