@@ -57,4 +57,3 @@ NVDA, sous-menu Préférences, boîte de dialogue Gestes de commandes:
 ## Changements pour la version 3.0 ##
 
 ## Changements pour la version 2.0 ##
-

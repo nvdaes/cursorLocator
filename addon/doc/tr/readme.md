@@ -50,4 +50,3 @@ aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
 ## 3.0 için değişiklikler ##
 
   eklendi.
-
