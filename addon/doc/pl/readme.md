@@ -51,23 +51,13 @@ Preferencje, oknie dialogowym Gesty wprowadzania:
 
 ## Zmiany w wersji 3.0 ##
 
-
-
-* Kompatybilny z NVDA 2023.1.
-
-
-
 ## Zmiany w wersji 2.0 ##
 
-* Dodano możliwość powtarzania powiadomień po dotarciu do końca i początku
-  linii.
 
 * Dodano obsługę dokumentów pakietu Office i Notatnika w systemie Windows
   11.
-
 
 ## Zmiany dla 1.0 ##
 
 * Pierwsza wersja.
 
-[[!tag dev stable]]
