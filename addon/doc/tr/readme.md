@@ -48,14 +48,20 @@ aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
   (Yapılandırma kategorisi).
 
 ## 3.0 için değişiklikler ##
+
+
 * NVDA 2023.1 ile uyumluluk.
 
+
 ## 2.0 için değişiklikler ##
+
 * Satırın sonuna ve başına gelindiğinde bildirimleri tekrarlama özelliği
   eklendi.
 * Windows 11'de Office belgeleri ve Not Defteri için destek eklendi.
 
+
 ## 1.0 için değişiklikler ##
+
 * İlk sürüm
 
 [[!tag dev stable]]
