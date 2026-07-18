@@ -19,6 +19,8 @@ jobs:
     if: github.repository != 'nvaccess/addonTemplate'
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
     - name: Checkout repo
