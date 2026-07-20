@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
+<file id="readme.md" original="https://raw.githubusercontent.com/nvdaes/cursorLocator/3911d979835d2d4773e7a7dcd8dd3ecba1da0a81/readme.md">
+<skeleton>
+# $(ID:436dc746-1ce0-4036-a548-47ea016aa549)
+
+* $(ID:b5bc4af6-8cfc-42d5-9118-ed8651d82be8)
+
+$(ID:f9291dca-312a-4370-91c3-bace9efa5ec0)
+
+$(ID:75b7d2b3-f34d-48d0-9090-07baf5576708)
+
+## $(ID:82ffc56d-3f21-4da1-b868-99078df28dcb)
+
+$(ID:beaa4911-a26f-4093-838d-0cae438d7c70)
+
+$(ID:127b3b15-24da-49cf-99db-ecf8e029cc8a)
+
+* $(ID:8d1255b2-714c-425f-8f80-35aef3c8dbd4)
+* $(ID:00b9931e-1bee-4f61-be88-f842b4da1325)
+* $(ID:aa0325ef-4c31-4e6f-a651-88fdfe82e89a)
+* $(ID:92965cbd-6fd2-4a65-beec-2336799212c4)
+* $(ID:759aa8bb-efcb-4dd1-b309-95a7bbd43cc0)
+* $(ID:1676ac19-e46c-4693-99d5-2a09c9b79134)
+* $(ID:13b581fd-f05a-46b7-8e96-4e39ea198e43)
+* $(ID:a6a78089-51fd-4716-bdad-112781ce8f2c)
+* $(ID:e2f03f12-feed-40d8-b4cb-62f705fe7e7f)
+
+## $(ID:2ce11d7d-484a-459d-bbd3-265794b59be3)
+
+$(ID:217953fe-e4ec-40ee-b477-de38bb9dbd20)
+
+* $(ID:88e4a734-acef-4a2d-9b48-a9bfe2d6f1b1)
+* $(ID:a0c3923f-84d8-4c80-9ede-ffbd60124315)
+
+## $(ID:66e931ba-d18e-43f0-a2dc-f85cc3b6c080)
+
+* $(ID:b704fca2-43cf-4970-b64a-14fa0e985af4)
+
+## $(ID:cbffd749-f198-464c-9c19-f0311ee8c40b)
+
+* $(ID:d3624f1b-4758-43dc-9146-b764b8485c59)
+* $(ID:7ea817ca-69a0-4516-a9e2-2a23cb6b94e8)
+
+## $(ID:3741c159-0126-49b4-8628-57b7564ee38d)
+
+* $(ID:7417d909-6978-4e62-ab85-91616e906b14)
+
+</skeleton>
+<unit id="436dc746-1ce0-4036-a548-47ea016aa549">
+<notes>
+<note appliesTo="source">line: 2</note>
+<note appliesTo="source">prefix: # </note>
+</notes>
+<segment>
+<source>Cursor Locator</source>
+</segment>
+</unit>
+<unit id="b5bc4af6-8cfc-42d5-9118-ed8651d82be8">
+<notes>
+<note appliesTo="source">line: 4</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Authors: Noelia Ruiz Martínez, Sergio Gómez Codina.</source>
+</segment>
+</unit>
+<unit id="f9291dca-312a-4370-91c3-bace9efa5ec0">
+<notes>
+<note appliesTo="source">line: 6</note>
+</notes>
+<segment>
+<source>This add-on makes possible to know the position of the system caret respect to the start of the current line, while typing to add text in documents or multiline controls.</source>
+</segment>
+</unit>
+<unit id="75b7d2b3-f34d-48d0-9090-07baf5576708">
+<notes>
+<note appliesTo="source">line: 8</note>
+</notes>
+<segment>
+<source>This feature deppends on the visual appearance of applications. Therefore, you may need to disable line adjustment or configure the add-on for different programs.</source>
+</segment>
+</unit>
+<unit id="82ffc56d-3f21-4da1-b868-99078df28dcb">
+<notes>
+<note appliesTo="source">line: 10</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Cursor Locator settings</source>
+</segment>
+</unit>
+<unit id="beaa4911-a26f-4093-838d-0cae438d7c70">
+<notes>
+<note appliesTo="source">line: 12</note>
+</notes>
+<segment>
+<source>This panel is available from NVDA's menu, Preferences submenu, Settings dialog.</source>
+</segment>
+</unit>
+<unit id="127b3b15-24da-49cf-99db-ecf8e029cc8a">
+<notes>
+<note appliesTo="source">line: 14</note>
+</notes>
+<segment>
+<source>It provides the following options:</source>
+</segment>
+</unit>
+<unit id="8d1255b2-714c-425f-8f80-35aef3c8dbd4">
+<notes>
+<note appliesTo="source">line: 16</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Report line length: You can type or choose a line length (number of characters between 0 and 600), which will be announced by a hight tone when it's reached. (The default value is 80 characters).</source>
+</segment>
+</unit>
+<unit id="00b9931e-1bee-4f61-be88-f842b4da1325">
+<notes>
+<note appliesTo="source">line: 17</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Maximum number of beeps for start of line notification: You can type or select a value between 0 and 600. The default value is 0.</source>
+</segment>
+</unit>
+<unit id="aa0325ef-4c31-4e6f-a651-88fdfe82e89a">
+<notes>
+<note appliesTo="source">line: 18</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Maximum number of beeps for end of line notification: You can type or select a value between 0 and 600. The default value is 0.</source>
+</segment>
+</unit>
+<unit id="92965cbd-6fd2-4a65-beec-2336799212c4">
+<notes>
+<note appliesTo="source">line: 19</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Pitch of sound for start of line: You can type or select a value between 20 and 20000. (The default value is 400 hertzs).</source>
+</segment>
+</unit>
+<unit id="759aa8bb-efcb-4dd1-b309-95a7bbd43cc0">
+<notes>
+<note appliesTo="source">line: 20</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Length of sound for start of line: You can type or select a value between 20 and 2000. (The default value is 50 milliseconds).</source>
+</segment>
+</unit>
+<unit id="1676ac19-e46c-4693-99d5-2a09c9b79134">
+<notes>
+<note appliesTo="source">line: 21</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Test sound for start of line: Press this button to test the configured sound for start of line.</source>
+</segment>
+</unit>
+<unit id="13b581fd-f05a-46b7-8e96-4e39ea198e43">
+<notes>
+<note appliesTo="source">line: 22</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Pitch of sound for end of line: You can type or select a value between 20 and 20000. (The default value is 1000 hertzs).</source>
+</segment>
+</unit>
+<unit id="a6a78089-51fd-4716-bdad-112781ce8f2c">
+<notes>
+<note appliesTo="source">line: 23</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Length of sound for end of line: You can type or select a value between 20 and 2000. (The default value is 50 milliseconds).</source>
+</segment>
+</unit>
+<unit id="e2f03f12-feed-40d8-b4cb-62f705fe7e7f">
+<notes>
+<note appliesTo="source">line: 24</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Test sound for end of line: Press this button to test the configured sound for end of line.</source>
+</segment>
+</unit>
+<unit id="2ce11d7d-484a-459d-bbd3-265794b59be3">
+<notes>
+<note appliesTo="source">line: 26</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Commands</source>
+</segment>
+</unit>
+<unit id="217953fe-e4ec-40ee-b477-de38bb9dbd20">
+<notes>
+<note appliesTo="source">line: 28</note>
+</notes>
+<segment>
+<source>You can modify the gestures to the following commands trought the NVDA's menu, Preferences submenu, Input gestures dialog:</source>
+</segment>
+</unit>
+<unit id="88e4a734-acef-4a2d-9b48-a9bfe2d6f1b1">
+<notes>
+<note appliesTo="source">line: 30</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA+control+shift+l: When possible, reports the lenght of the current line (System caret category).</source>
+</segment>
+</unit>
+<unit id="a0c3923f-84d8-4c80-9ede-ffbd60124315">
+<notes>
+<note appliesTo="source">line: 31</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Not assigned: Shows the Cursor Locator settings dialog (Config category).</source>
+</segment>
+</unit>
+<unit id="66e931ba-d18e-43f0-a2dc-f85cc3b6c080">
+<notes>
+<note appliesTo="source">line: 33</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 3.0</source>
+</segment>
+</unit>
+<unit id="b704fca2-43cf-4970-b64a-14fa0e985af4">
+<notes>
+<note appliesTo="source">line: 35</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Compatible with NVDA 2023.1.</source>
+</segment>
+</unit>
+<unit id="cbffd749-f198-464c-9c19-f0311ee8c40b">
+<notes>
+<note appliesTo="source">line: 37</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 2.0</source>
+</segment>
+</unit>
+<unit id="d3624f1b-4758-43dc-9146-b764b8485c59">
+<notes>
+<note appliesTo="source">line: 39</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added ability to repeat notifications when reaching end and start of line.</source>
+</segment>
+</unit>
+<unit id="7ea817ca-69a0-4516-a9e2-2a23cb6b94e8">
+<notes>
+<note appliesTo="source">line: 40</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added support for Office documents, and Notepad on Windows 11.</source>
+</segment>
+</unit>
+<unit id="3741c159-0126-49b4-8628-57b7564ee38d">
+<notes>
+<note appliesTo="source">line: 42</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 1.0</source>
+</segment>
+</unit>
+<unit id="7417d909-6978-4e62-ab85-91616e906b14">
+<notes>
+<note appliesTo="source">line: 44</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Initial version.</source>
+</segment>
+</unit>
+</file>
+</xliff>
