@@ -1,43 +1,61 @@
-# İmleç Konumlandırıcı
+# İmleç Konumlandırıcı #
 
 * Yazarlar: Noelia Ruiz Martínez, Sergio Gómez Codina.
 
-Bu eklenti, belgelerde veya çok satırlı kontrollerde metin eklerken sistem imlecinin geçerli satırın başlangıcına göre konumunu bilmeyi mümkün kılar.
+Bu eklenti, belgelere veya çok satırlı kontrollere metin eklemek için
+yazarken, sistem imlecinin geçerli satırın başlangıcına göre konumunu
+bilmeyi mümkün kılar.
 
-Bu özellik, uygulamaların görsel görünümüne bağlıdır. Bu nedenle, farklı programlar için satır ayarlamasını devre dışı bırakmanız veya eklentiyi yapılandırmanız gerekebilir.
+Bu özellik, uygulamaların görsel görünümüne bağlıdır. Bu nedenle, satır
+ayarını devre dışı bırakmanız veya eklentiyi farklı programlar için
+yapılandırmanız gerekebilir.
 
-## İmleç Konumlandırıcı Ayarları
+## İmleç Konumlandırıcı ayarları ##
 
-Bu panele NVDA menüsü, Tercihler alt menüsü, Ayarlar iletişim kutusundan erişilebilir.
+Bu panele NVDA menüsü, Tercihler alt menüsü, Ayarlar iletişim kutusundan
+erişilebilir.
 
-Aşağıdaki seçenekleri sunmaktadır:
+Aşağıdaki seçenekleri sağlar:
 
-* Satır uzunluk Bildirimi: 0 ile 600 arasında bir satır uzunluğu (karakter sayısı) yazabilir veya seçebilirsiniz; bu uzunluğa ulaşıldığında yüksek sesli bir uyarı verilecektir. (Varsayılan değer 80 karakterdir).
-* Satır başı bildirimi için maksimum bip sesi sayısı: 0 ile 600 arasında bir değer yazabilir veya seçebilirsiniz. Varsayılan değer 0'dır.
-* Satır sonu bildirimi için maksimum bip sesi sayısı: 0 ile 600 arasında bir değer yazabilir veya seçebilirsiniz. Varsayılan değer 0'dır.
-* Satır başı sesinin perdesi: 20 ile 20000 arasında bir değer yazabilir veya seçebilirsiniz. (Varsayılan değer 400 hertz'dir).
-* Satır başı için ses süresi: 20 ile 2000 arasında bir değer yazabilir veya seçebilirsiniz. (Varsayılan değer 50 milisaniyedir).
-* Satır başı ses testi: Satır başı için yapılandırılmış sesi test etmek için bu düğmeye basın.
-* Satır sonu sesinin perdesi: 20 ile 20000 arasında bir değer yazabilir veya seçebilirsiniz. (Varsayılan değer 1000 hertz'dir).
-* Satır sonu için ses süresi: 20 ile 2000 arasında bir değer yazabilir veya seçebilirsiniz. (Varsayılan değer 50 milisaniyedir).
-* Satır sonu ses testi: Satır sonu için yapılandırılmış sesi test etmek için bu düğmeye basın.
+* Satırı uzunluğu bildirimi: Ulaşıldığında yüksek bir tonla duyurulacak olan
+  bir satır uzunluğu (0 ile 600 arasındaki karakter sayısı) yazabilir veya
+  seçebilirsiniz. (Varsayılan değer 80 karakterdir).
+* Satır bildiriminin başlangıcı için maksimum bip sesi sayısı: 0 ile 600
+  arasında bir değer yazabilir veya seçebilirsiniz. Varsayılan değer 0'dır.
+* Satır sonu bildirimi için maksimum bip sayısı: 0 ile 600 arasında bir
+  değer yazabilir veya seçebilirsiniz. Varsayılan değer 0'dır.
+* Satır başlangıcı için ses perdesi: 20 ile 20000 arasında bir değer
+  yazabilir veya seçebilirsiniz. (Varsayılan değer 400 hertz'dir).
+* Satır başlangıcı için ses uzunluğu: 20 ile 2000 arasında bir değer
+  yazabilir veya seçebilirsiniz. (Varsayılan değer 50 milisaniyedir).
+* Satır başlangıcı için sesi test et: Satır başlangıcı için yapılandırılmış
+  sesi test etmek için bu düğmeye basın.
+* Satır sonu için ses perdesi: 20 ile 20000 arasında bir değer yazabilir
+  veya seçebilirsiniz. (Varsayılan değer 1000 hertz'dir).
+* Satır sonu için ses uzunluğu: 20 ile 2000 arasında bir değer yazabilir
+  veya seçebilirsiniz. (Varsayılan değer 50 milisaniyedir).
+* Satır sonu için sesi test et: Satır sonu için yapılandırılmış sesi test
+  etmek için bu düğmeye basın.
 
-## Komutlar
+## Komutlar ##
 
-NVDA menüsü, Tercihler alt menüsü, Girdi hareketleri iletişim kutusu aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
+NVDA menüsü, Tercihler alt menüsü, Girdi hareketleri iletişim kutusu
+aracılığıyla hareketleri aşağıdaki komutlara göre değiştirebilirsiniz:
 
-* NVDA+control+shift+l: Mümkün olduğunda, geçerli satırın uzunluğunu bildirir (Sistem imleç kategorisi).
-* Atanmamış: İmleç Konumlandırıcı ayarları iletişim kutusunu gösterir (Konfigürasyon kategorisi).
+* NVDA+kontrol+shift+l: Mümkün olduğunda geçerli satırın uzunluğunu bildirir
+  (Sistem düzeltme kategorisi).
+* Atanmamış: İmleç konumlandırıcı ayarları iletişim kutusunu gösterir
+  (Yapılandırma kategorisi).
 
-## 3.0 için değişiklikler
+## 3.0 için değişiklikler ##
+* NVDA 2023.1 ile uyumluluk.
 
-* NVDA 2023.1 ile uyumlu.
-
-## 2.0 için değişiklikler
-
-* Satır sonuna ve başına ulaşıldığında bildirimlerin tekrarlanması özelliği eklendi.
+## 2.0 için değişiklikler ##
+* Satırın sonuna ve başına gelindiğinde bildirimleri tekrarlama özelliği
+  eklendi.
 * Windows 11'de Office belgeleri ve Not Defteri için destek eklendi.
 
-## 1.0 için değişiklikler
+## 1.0 için değişiklikler ##
+* İlk sürüm
 
-* İlk sürüm.
+[[!tag dev stable]]
